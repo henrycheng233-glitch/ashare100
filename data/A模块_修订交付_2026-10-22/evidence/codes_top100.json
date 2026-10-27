@@ -1,0 +1,602 @@
+[
+  {
+    "code": "601398.SH",
+    "name_abbr_source": "XD工商银",
+    "name_full": "中国工商银行股份有限公司",
+    "market_cap_snapshot": 2831849033828.87
+  },
+  {
+    "code": "688825.SH",
+    "name_abbr_source": "长鑫科技",
+    "name_full": "长鑫科技集团股份有限公司",
+    "market_cap_snapshot": 2781211539184.69
+  },
+  {
+    "code": "601288.SH",
+    "name_abbr_source": "XD农业银",
+    "name_full": "中国农业银行股份有限公司",
+    "market_cap_snapshot": 2504280682129.97
+  },
+  {
+    "code": "601939.SH",
+    "name_abbr_source": "建设银行",
+    "name_full": "中国建设银行股份有限公司",
+    "market_cap_snapshot": 2256536989499.51
+  },
+  {
+    "code": "601857.SH",
+    "name_abbr_source": "中国石油",
+    "name_full": "中国石油天然气股份有限公司",
+    "market_cap_snapshot": 2210413742522.06
+  },
+  {
+    "code": "601988.SH",
+    "name_abbr_source": "中国银行",
+    "name_full": "中国银行股份有限公司",
+    "market_cap_snapshot": 2164131577076.03
+  },
+  {
+    "code": "600519.SH",
+    "name_abbr_source": "贵州茅台",
+    "name_full": "贵州茅台酒股份有限公司",
+    "market_cap_snapshot": 1637219372013.69
+  },
+  {
+    "code": "600941.SH",
+    "name_abbr_source": "中国移动",
+    "name_full": "中国移动有限公司",
+    "market_cap_snapshot": 1467810422075.41
+  },
+  {
+    "code": "600036.SH",
+    "name_abbr_source": "招商银行",
+    "name_full": "招商银行股份有限公司",
+    "market_cap_snapshot": 1079928402653.05
+  },
+  {
+    "code": "300750.SZ",
+    "name_abbr_source": "宁德时代",
+    "name_full": "宁德时代新能源科技股份有限公司",
+    "market_cap_snapshot": 1072983068620.43
+  },
+  {
+    "code": "601088.SH",
+    "name_abbr_source": "中国神华",
+    "name_full": "中国神华能源股份有限公司",
+    "market_cap_snapshot": 1018536731150.27
+  },
+  {
+    "code": "600938.SH",
+    "name_abbr_source": "中国海油",
+    "name_full": "中国海洋石油有限公司",
+    "market_cap_snapshot": 1016831143781.34
+  },
+  {
+    "code": "601138.SH",
+    "name_abbr_source": "工业富联",
+    "name_full": "富士康工业互联网股份有限公司",
+    "market_cap_snapshot": 986251386514.8
+  },
+  {
+    "code": "601318.SH",
+    "name_abbr_source": "中国平安",
+    "name_full": "中国平安保险(集团)股份有限公司",
+    "market_cap_snapshot": 859393612545.31
+  },
+  {
+    "code": "601628.SH",
+    "name_abbr_source": "中国人寿",
+    "name_full": "中国人寿保险股份有限公司",
+    "market_cap_snapshot": 853713850197.075
+  },
+  {
+    "code": "300308.SZ",
+    "name_abbr_source": "中际旭创",
+    "name_full": "中际旭创股份有限公司",
+    "market_cap_snapshot": 763210102902.82
+  },
+  {
+    "code": "601899.SH",
+    "name_abbr_source": "紫金矿业",
+    "name_full": "紫金矿业集团股份有限公司",
+    "market_cap_snapshot": 752194964668.753
+  },
+  {
+    "code": "600900.SH",
+    "name_abbr_source": "长江电力",
+    "name_full": "中国长江电力股份有限公司",
+    "market_cap_snapshot": 723525197862.12
+  },
+  {
+    "code": "601328.SH",
+    "name_abbr_source": "交通银行",
+    "name_full": "交通银行股份有限公司",
+    "market_cap_snapshot": 694056905596.322
+  },
+  {
+    "code": "002594.SZ",
+    "name_abbr_source": "比亚迪",
+    "name_full": "比亚迪股份有限公司",
+    "market_cap_snapshot": 662892524498.4
+  },
+  {
+    "code": "601658.SH",
+    "name_abbr_source": "邮储银行",
+    "name_full": "中国邮政储蓄银行股份有限公司",
+    "market_cap_snapshot": 656626416706.207
+  },
+  {
+    "code": "000333.SZ",
+    "name_abbr_source": "美的集团",
+    "name_full": "美的集团股份有限公司",
+    "market_cap_snapshot": 637122120468.876
+  },
+  {
+    "code": "600028.SH",
+    "name_abbr_source": "中国石化",
+    "name_full": "中国石油化工股份有限公司",
+    "market_cap_snapshot": 617270385116.522
+  },
+  {
+    "code": "688256.SH",
+    "name_abbr_source": "寒武纪",
+    "name_full": "中科寒武纪科技股份有限公司",
+    "market_cap_snapshot": 576294390011.36
+  },
+  {
+    "code": "601728.SH",
+    "name_abbr_source": "中国电信",
+    "name_full": "中国电信股份有限公司",
+    "market_cap_snapshot": 566782367509.535
+  },
+  {
+    "code": "688981.SH",
+    "name_abbr_source": "中芯国际",
+    "name_full": "中芯国际集成电路制造有限公司",
+    "market_cap_snapshot": 512665351049.641
+  },
+  {
+    "code": "601998.SH",
+    "name_abbr_source": "中信银行",
+    "name_full": "中信银行股份有限公司",
+    "market_cap_snapshot": 473861111608.627
+  },
+  {
+    "code": "688235.SH",
+    "name_abbr_source": "百济神州",
+    "name_full": "百济神州有限公司",
+    "market_cap_snapshot": 464002873493.393
+  },
+  {
+    "code": "603259.SH",
+    "name_abbr_source": "药明康德",
+    "name_full": "无锡药明康德新药开发股份有限公司",
+    "market_cap_snapshot": 455304504952.041
+  },
+  {
+    "code": "688041.SH",
+    "name_abbr_source": "海光信息",
+    "name_full": "海光信息技术股份有限公司",
+    "market_cap_snapshot": 449294552990.3
+  },
+  {
+    "code": "300502.SZ",
+    "name_abbr_source": "新易盛",
+    "name_full": "成都新易盛通信技术股份有限公司",
+    "market_cap_snapshot": 410220127617.12
+  },
+  {
+    "code": "002371.SZ",
+    "name_abbr_source": "北方华创",
+    "name_full": "北方华创科技集团股份有限公司",
+    "market_cap_snapshot": 408299806313.85
+  },
+  {
+    "code": "601166.SH",
+    "name_abbr_source": "兴业银行",
+    "name_full": "兴业银行股份有限公司",
+    "market_cap_snapshot": 388126937956.1
+  },
+  {
+    "code": "002475.SZ",
+    "name_abbr_source": "立讯精密",
+    "name_full": "立讯精密工业股份有限公司",
+    "market_cap_snapshot": 370063335791.484
+  },
+  {
+    "code": "600030.SH",
+    "name_abbr_source": "中信证券",
+    "name_full": "中信证券股份有限公司",
+    "market_cap_snapshot": 367045455079.536
+  },
+  {
+    "code": "600000.SH",
+    "name_abbr_source": "浦发银行",
+    "name_full": "上海浦东发展银行股份有限公司",
+    "market_cap_snapshot": 321734397978
+  },
+  {
+    "code": "600276.SH",
+    "name_abbr_source": "恒瑞医药",
+    "name_full": "江苏恒瑞医药股份有限公司",
+    "market_cap_snapshot": 313197590094
+  },
+  {
+    "code": "601319.SH",
+    "name_abbr_source": "中国人保",
+    "name_full": "中国人民保险集团股份有限公司",
+    "market_cap_snapshot": 297798215321.449
+  },
+  {
+    "code": "002415.SZ",
+    "name_abbr_source": "海康威视",
+    "name_full": "杭州海康威视数字技术股份有限公司",
+    "market_cap_snapshot": 296391945927
+  },
+  {
+    "code": "603993.SH",
+    "name_abbr_source": "洛阳钼业",
+    "name_full": "洛阳栾川钼业集团股份有限公司",
+    "market_cap_snapshot": 293041331738.858
+  },
+  {
+    "code": "600183.SH",
+    "name_abbr_source": "生益科技",
+    "name_full": "广东生益科技股份有限公司",
+    "market_cap_snapshot": 289027146693.3
+  },
+  {
+    "code": "300059.SZ",
+    "name_abbr_source": "东方财富",
+    "name_full": "东方财富信息股份有限公司",
+    "market_cap_snapshot": 283217377762.5
+  },
+  {
+    "code": "000858.SZ",
+    "name_abbr_source": "五 粮 液",
+    "name_full": "宜宾五粮液股份有限公司",
+    "market_cap_snapshot": 279475776360
+  },
+  {
+    "code": "601225.SH",
+    "name_abbr_source": "陕西煤业",
+    "name_full": "陕西煤业股份有限公司",
+    "market_cap_snapshot": 268454550000
+  },
+  {
+    "code": "601211.SH",
+    "name_abbr_source": "国泰海通",
+    "name_full": "国泰海通证券股份有限公司",
+    "market_cap_snapshot": 264990506377.652
+  },
+  {
+    "code": "688012.SH",
+    "name_abbr_source": "中微公司",
+    "name_full": "中微半导体设备(上海)股份有限公司",
+    "market_cap_snapshot": 262448803352
+  },
+  {
+    "code": "600150.SH",
+    "name_abbr_source": "中国船舶",
+    "name_full": "中国船舶工业股份有限公司",
+    "market_cap_snapshot": 262343158099.68
+  },
+  {
+    "code": "601601.SH",
+    "name_abbr_source": "中国太保",
+    "name_full": "中国太平洋保险(集团)股份有限公司",
+    "market_cap_snapshot": 258885713518.95
+  },
+  {
+    "code": "601816.SH",
+    "name_abbr_source": "京沪高铁",
+    "name_full": "京沪高速铁路股份有限公司",
+    "market_cap_snapshot": 252945762342.9
+  },
+  {
+    "code": "601919.SH",
+    "name_abbr_source": "中远海控",
+    "name_full": "中远海运控股股份有限公司",
+    "market_cap_snapshot": 246967279367.949
+  },
+  {
+    "code": "002714.SZ",
+    "name_abbr_source": "牧原股份",
+    "name_full": "牧原食品集团股份有限公司",
+    "market_cap_snapshot": 239361058618.762
+  },
+  {
+    "code": "300394.SZ",
+    "name_abbr_source": "天孚通信",
+    "name_full": "苏州天孚光通信股份有限公司",
+    "market_cap_snapshot": 234505578493.14
+  },
+  {
+    "code": "002142.SZ",
+    "name_abbr_source": "宁波银行",
+    "name_full": "宁波银行股份有限公司",
+    "market_cap_snapshot": 228814420942.8
+  },
+  {
+    "code": "002384.SZ",
+    "name_abbr_source": "东山精密",
+    "name_full": "苏州东山精密制造股份有限公司",
+    "market_cap_snapshot": 225599099716.44
+  },
+  {
+    "code": "600919.SH",
+    "name_abbr_source": "江苏银行",
+    "name_full": "江苏银行股份有限公司",
+    "market_cap_snapshot": 224436698182.49
+  },
+  {
+    "code": "000001.SZ",
+    "name_abbr_source": "平安银行",
+    "name_full": "平安银行股份有限公司",
+    "market_cap_snapshot": 221421526639.18
+  },
+  {
+    "code": "002463.SZ",
+    "name_abbr_source": "沪电股份",
+    "name_full": "沪士电子股份有限公司",
+    "market_cap_snapshot": 221244075848.89
+  },
+  {
+    "code": "688008.SH",
+    "name_abbr_source": "澜起科技",
+    "name_full": "澜起科技股份有限公司",
+    "market_cap_snapshot": 218507989342.998
+  },
+  {
+    "code": "003816.SZ",
+    "name_abbr_source": "中国广核",
+    "name_full": "中国广核电力股份有限公司",
+    "market_cap_snapshot": 210612746198.812
+  },
+  {
+    "code": "688836.SH",
+    "name_abbr_source": "宇树科技-W",
+    "name_full": "宇树科技股份有限公司",
+    "market_cap_snapshot": 208299135100
+  },
+  {
+    "code": "002916.SZ",
+    "name_abbr_source": "深南电路",
+    "name_full": "深南电路股份有限公司",
+    "market_cap_snapshot": 208164511432
+  },
+  {
+    "code": "600309.SH",
+    "name_abbr_source": "万华化学",
+    "name_full": "万华化学集团股份有限公司",
+    "market_cap_snapshot": 208113753696.48
+  },
+  {
+    "code": "000651.SZ",
+    "name_abbr_source": "格力电器",
+    "name_full": "珠海格力电器股份有限公司",
+    "market_cap_snapshot": 207980195163.33
+  },
+  {
+    "code": "300760.SZ",
+    "name_abbr_source": "迈瑞医疗",
+    "name_full": "深圳迈瑞生物医疗电子股份有限公司",
+    "market_cap_snapshot": 206102847224.48
+  },
+  {
+    "code": "603986.SH",
+    "name_abbr_source": "兆易创新",
+    "name_full": "兆易创新科技集团股份有限公司",
+    "market_cap_snapshot": 203076802301.636
+  },
+  {
+    "code": "601985.SH",
+    "name_abbr_source": "中国核电",
+    "name_full": "中国核能电力股份有限公司",
+    "market_cap_snapshot": 194984659661.52
+  },
+  {
+    "code": "600025.SH",
+    "name_abbr_source": "华能水电",
+    "name_full": "华能澜沧江水电股份有限公司",
+    "market_cap_snapshot": 193018136502.52
+  },
+  {
+    "code": "603288.SH",
+    "name_abbr_source": "海天味业",
+    "name_full": "佛山市海天调味食品股份有限公司",
+    "market_cap_snapshot": 192361972955.589
+  },
+  {
+    "code": "688801.SH",
+    "name_abbr_source": "燧原科技-U",
+    "name_full": "上海燧原科技股份有限公司",
+    "market_cap_snapshot": 191549554132.8
+  },
+  {
+    "code": "603268.SH",
+    "name_abbr_source": "松发股份",
+    "name_full": "广东松发陶瓷股份有限公司",
+    "market_cap_snapshot": 191498410569.18
+  },
+  {
+    "code": "300408.SZ",
+    "name_abbr_source": "三环集团",
+    "name_full": "潮州三环(集团)股份有限公司",
+    "market_cap_snapshot": 190324222181.458
+  },
+  {
+    "code": "000338.SZ",
+    "name_abbr_source": "潍柴动力",
+    "name_full": "潍柴动力股份有限公司",
+    "market_cap_snapshot": 188390775254.296
+  },
+  {
+    "code": "601869.SH",
+    "name_abbr_source": "长飞光纤",
+    "name_full": "长飞光纤光缆股份有限公司",
+    "market_cap_snapshot": 187841610357.235
+  },
+  {
+    "code": "000725.SZ",
+    "name_abbr_source": "京东方A",
+    "name_full": "京东方科技集团股份有限公司",
+    "market_cap_snapshot": 186434210902.405
+  },
+  {
+    "code": "601668.SH",
+    "name_abbr_source": "中国建筑",
+    "name_full": "中国建筑股份有限公司",
+    "market_cap_snapshot": 186354960902.44
+  },
+  {
+    "code": "688347.SH",
+    "name_abbr_source": "华虹宏力",
+    "name_full": "华虹宏力半导体有限公司",
+    "market_cap_snapshot": 185281895102.846
+  },
+  {
+    "code": "002379.SZ",
+    "name_abbr_source": "宏桥控股",
+    "name_full": "山东宏桥铝业控股股份有限公司",
+    "market_cap_snapshot": 184260011376.28
+  },
+  {
+    "code": "600406.SH",
+    "name_abbr_source": "国电南瑞",
+    "name_full": "国电南瑞科技股份有限公司",
+    "market_cap_snapshot": 182642134987.44
+  },
+  {
+    "code": "688808.SH",
+    "name_abbr_source": "联讯仪器",
+    "name_full": "苏州联讯仪器股份有限公司",
+    "market_cap_snapshot": 182487947067
+  },
+  {
+    "code": "688802.SH",
+    "name_abbr_source": "沐曦股份-U",
+    "name_full": "沐曦集成电路(上海)股份有限公司",
+    "market_cap_snapshot": 178988736000
+  },
+  {
+    "code": "300476.SZ",
+    "name_abbr_source": "胜宏科技",
+    "name_full": "胜宏科技(惠州)股份有限公司",
+    "market_cap_snapshot": 178744324659.635
+  },
+  {
+    "code": "688820.SH",
+    "name_abbr_source": "盛合晶微",
+    "name_full": "盛合晶微半导体有限公司",
+    "market_cap_snapshot": 176013524425.53
+  },
+  {
+    "code": "600887.SH",
+    "name_abbr_source": "伊利股份",
+    "name_full": "内蒙古伊利实业集团股份有限公司",
+    "market_cap_snapshot": 174579954409.2
+  },
+  {
+    "code": "302132.SZ",
+    "name_abbr_source": "中航成飞",
+    "name_full": "中航成飞股份有限公司",
+    "market_cap_snapshot": 174407404111.52
+  },
+  {
+    "code": "002938.SZ",
+    "name_abbr_source": "鹏鼎控股",
+    "name_full": "鹏鼎控股(深圳)股份有限公司",
+    "market_cap_snapshot": 172285675155.72
+  },
+  {
+    "code": "601766.SH",
+    "name_abbr_source": "中国中车",
+    "name_full": "中国中车股份有限公司",
+    "market_cap_snapshot": 172033508278.435
+  },
+  {
+    "code": "601818.SH",
+    "name_abbr_source": "光大银行",
+    "name_full": "中国光大银行股份有限公司",
+    "market_cap_snapshot": 171121770303.655
+  },
+  {
+    "code": "601898.SH",
+    "name_abbr_source": "中煤能源",
+    "name_full": "中国中煤能源股份有限公司",
+    "market_cap_snapshot": 170129045855.996
+  },
+  {
+    "code": "688795.SH",
+    "name_abbr_source": "摩尔线程-U",
+    "name_full": "摩尔线程智能科技(北京)股份有限公司",
+    "market_cap_snapshot": 169915200445.5
+  },
+  {
+    "code": "600690.SH",
+    "name_abbr_source": "海尔智家",
+    "name_full": "海尔智家股份有限公司",
+    "market_cap_snapshot": 168684443492.702
+  },
+  {
+    "code": "600930.SH",
+    "name_abbr_source": "华电新能",
+    "name_full": "华电新能源集团股份有限公司",
+    "market_cap_snapshot": 163519999998.88
+  },
+  {
+    "code": "600989.SH",
+    "name_abbr_source": "宝丰能源",
+    "name_full": "宁夏宝丰能源集团股份有限公司",
+    "market_cap_snapshot": 162653924800
+  },
+  {
+    "code": "600031.SH",
+    "name_abbr_source": "三一重工",
+    "name_full": "三一重工股份有限公司",
+    "market_cap_snapshot": 160079837009.411
+  },
+  {
+    "code": "601066.SH",
+    "name_abbr_source": "中信建投",
+    "name_full": "中信建投证券股份有限公司",
+    "market_cap_snapshot": 158895416631.926
+  },
+  {
+    "code": "688072.SH",
+    "name_abbr_source": "拓荆科技",
+    "name_full": "拓荆科技股份有限公司",
+    "market_cap_snapshot": 155728352910
+  },
+  {
+    "code": "002352.SZ",
+    "name_abbr_source": "顺丰控股",
+    "name_full": "顺丰控股股份有限公司",
+    "market_cap_snapshot": 154014744930.889
+  },
+  {
+    "code": "300274.SZ",
+    "name_abbr_source": "阳光电源",
+    "name_full": "阳光电源股份有限公司",
+    "market_cap_snapshot": 149893185955.2
+  },
+  {
+    "code": "601688.SH",
+    "name_abbr_source": "华泰证券",
+    "name_full": "华泰证券股份有限公司",
+    "market_cap_snapshot": 148376907335.033
+  },
+  {
+    "code": "600188.SH",
+    "name_abbr_source": "兖矿能源",
+    "name_full": "兖矿能源集团股份有限公司",
+    "market_cap_snapshot": 148175620916.7
+  },
+  {
+    "code": "300033.SZ",
+    "name_abbr_source": "同花顺",
+    "name_full": "浙江核新同花顺网络信息股份有限公司",
+    "market_cap_snapshot": 147404544000
+  }
+]

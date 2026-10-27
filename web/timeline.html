@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>时间轴 · Ashare100</title>
+<style>
+:root{--paper:#F5F5F4;--surface:#fff;--ink:#1F2328;--muted:#6B7078;--faint:#8A9099;--border:#E2E2E0;--amber:#D99A1E;
+  --l1:#7A2335;--l2:#D99A1E;--l3:#2F6F73;--l4:#6B7078;--ease:cubic-bezier(.2,.8,.2,1);--pop:cubic-bezier(.2,.9,.3,1.3)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.6 "PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+.wrap{max-width:1320px;margin:0 auto;padding:20px 24px 28px}
+/* 嵌入正式网页（iframe）时：去掉外边距，框高按 iframe 高度计算 */
+.embed body,.embed{background:var(--paper)}
+.embed .wrap{padding:16px 24px 16px}
+.embed .frame{height:calc(100vh - 254px)}
+.embed body{overflow:hidden}
+/* 控制面板（白色卡片） */
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:14px}
+.head{padding:14px 18px 10px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.ttl{font-size:17px;font-weight:800;margin-right:6px}
+.tog{display:inline-flex;align-items:center;gap:7px;padding:4px 12px 4px 6px;border-radius:99px;border:1px solid var(--border);cursor:pointer;font-size:13px;user-select:none;transition:border-color .2s}
+.tog i{width:28px;height:16px;border-radius:8px;background:#D6D8DB;position:relative;transition:background .25s}
+.tog i::after{content:'';position:absolute;left:2px;top:2px;width:12px;height:12px;border-radius:50%;background:#fff;transition:transform .25s var(--ease)}
+.tog.on{border-color:#1F2328}.tog.on i{background:#1F2328}.tog.on i::after{transform:translateX(12px)}
+.grades{display:inline-flex;gap:6px;align-items:center;transition:opacity .3s}
+.grades.off{opacity:.3;pointer-events:none}
+.gchip{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:99px;border:1px solid var(--border);cursor:pointer;font-size:12px}
+.gchip b{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.gchip.off{opacity:.35}
+.seg{display:inline-flex;background:#EFEFEC;border-radius:8px;padding:3px}
+.seg button{border:0;background:none;padding:3px 10px;border-radius:6px;font:inherit;font-size:12px;color:var(--muted);cursor:pointer}
+.seg button.on{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.row input{height:28px;border:1px solid var(--border);border-radius:8px;padding:0 10px;font:inherit;font-size:12px;width:130px}
+.now{margin-left:auto;display:flex;align-items:baseline;gap:8px}
+.now b{font-size:24px;font-weight:800;font-variant-numeric:tabular-nums}.now span{font-size:12px;color:var(--muted)}
+/* 全景导航条：细轨道 + 可拖动 / 可缩放的视窗 */
+.nav{position:relative;margin-top:12px;height:44px;user-select:none}
+.nav .rail{position:absolute;left:0;right:0;top:16px;height:12px;border-radius:6px;background:#F0F0EE;overflow:hidden;cursor:pointer}
+.nav .era{position:absolute;top:0;bottom:0;opacity:.35}
+.nav .tick{position:absolute;top:3px;width:6px;height:6px;margin-left:-3px;border-radius:50%;pointer-events:none}
+.nav .yl{position:absolute;top:30px;font-size:10px;color:var(--faint);transform:translateX(-50%);pointer-events:none}
+.nav .win{position:absolute;top:10px;height:24px;border-radius:7px;border:2px solid var(--amber);background:rgba(217,154,30,.12);cursor:grab;box-shadow:0 2px 8px rgba(217,154,30,.25);touch-action:none}
+.nav .win:active{cursor:grabbing}
+.nav .win .h{position:absolute;top:3px;bottom:3px;width:8px;border-radius:3px;background:var(--amber);cursor:ew-resize}
+.nav .win .h.l{left:-5px}.nav .win .h.r{right:-5px}
+.nav .win .lab{position:absolute;top:-17px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;color:#A86A12;white-space:nowrap;pointer-events:none}
+.hint{font-size:11px;color:var(--faint);margin-top:2px}
+/* 时间轴框：框内滚动，内容不再溢出到页面 */
+.frame{position:relative;margin-top:12px;height:calc(100vh - 230px);min-height:420px;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
+.tl{position:relative}
+.ov{position:absolute;inset:0;pointer-events:none}
+.spine{position:absolute;width:4px;border-radius:2px;transform-origin:top;transform:scaleY(0);transition:transform 1s var(--ease)}
+.loaded .spine{transform:scaleY(1)}
+.yt{position:absolute;transform:translate(-50%,-50%);font-size:11px;color:var(--faint);background:#fff;padding:0 4px;font-variant-numeric:tabular-nums}
+.yt.big{font-size:15px;font-weight:800;color:var(--ink)}
+.eralab{position:absolute;left:14px;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--muted)}
+.eralab::before{content:'';display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--c);margin-right:6px;vertical-align:-1px}
+.lanehead{position:absolute;top:10px;font-size:11px;letter-spacing:.16em;color:var(--faint);font-weight:700}
+/* 宏观背景（不做气泡，可关闭） */
+.macro{position:absolute;left:0;right:0;background:rgba(31,35,40,.035);transition:opacity .4s}
+.macro span{position:absolute;right:10px;top:4px;font-size:11px;color:var(--faint)}
+.macro.pt{height:22px;margin-top:-11px;background:linear-gradient(90deg,transparent,rgba(31,35,40,.05) 30%,rgba(31,35,40,.05) 70%,transparent)}
+.macro-off .macro{opacity:0}
+/* 入场：从脊柱方向生长 */
+.it{position:absolute;opacity:0;transition:opacity .45s var(--ease) var(--d,0ms),transform .55s var(--pop) var(--d,0ms),top .5s var(--ease),left .5s var(--ease)}
+.it.in{opacity:1;transform:none}
+.pol-off .pol,.pol.gone{opacity:0!important;transform:translateX(24px) scale(.88)!important;pointer-events:none}
+.com-off .bub{opacity:0!important;transform:translateX(-30px) scale(.3)!important;pointer-events:none}
+/* 政策卡片：外道 = 一、二级；内道 = 三、四级 */
+.pol{transform:translateX(24px) scale(.88);transform-origin:right center;text-align:right}
+.pol .dt{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pol.g1{width:270px;padding:8px 12px;border-radius:10px;background:var(--l1);color:#fff}
+.pol.g1 .dt{color:#F1CBD2}.pol.g1 .t{font-size:14px;font-weight:700;line-height:1.35}.pol.g1 .m{font-size:11.5px;opacity:.85;line-height:1.4}
+.pol.g2{width:270px;padding:7px 12px;border-radius:10px;background:#fff;border:1.5px solid var(--l2)}
+.pol.g2 .t{font-size:13.5px;font-weight:700;line-height:1.35}.pol.g2 .m{font-size:11.5px;color:var(--muted);line-height:1.4}
+.pol.g3{padding:2px 11px;border-radius:99px;background:var(--l3);color:#fff;font-size:12.5px;white-space:nowrap}
+.pol.g3 .dt{color:#BFE0E1;margin-right:6px}
+.pol.g4{padding:1px 8px;border-radius:6px;font-size:12px;color:#4B5058;white-space:nowrap;background:#F4F4F2}
+.pol.g4 .dt{margin-right:6px}
+.pol:hover{z-index:5;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.compact .pol .m{display:none}.compact .pol.g4{display:none}
+.pol.hl{outline:3px solid var(--amber);outline-offset:2px}
+.sdot{position:absolute;border-radius:50%;border:2px solid #fff;transform:translate(-50%,-50%);transition:transform .2s,opacity .3s}
+.sdot.on{transform:translate(-50%,-50%) scale(1.8)}
+.pol-off .sdot{opacity:0}
+.guide{stroke:var(--amber);stroke-width:1.5;fill:none}
+/* 公司气泡 */
+.bub{display:flex;align-items:center;gap:6px;transform:translateX(-30px) scale(.3);cursor:pointer;white-space:nowrap}
+.bub .c{flex:none;border-radius:50%;background:var(--c);box-shadow:inset 0 -3px 6px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700;transition:transform .25s var(--pop)}
+.bub.ah .c{box-shadow:0 0 0 2px #fff,0 0 0 3.5px #E86A54,inset 0 -3px 6px rgba(0,0,0,.18)}
+.bub .n{font-size:12px;padding:0 2px;border-radius:4px;background:rgba(255,255,255,.85)}
+.bub:hover{z-index:6}.bub:hover .c{transform:scale(1.2)}.bub:hover .n{background:#1F2328;color:#fff}
+.dimc .bub:not(.hl){opacity:.12!important}
+.bub.hl .c{box-shadow:0 0 0 3px var(--amber)}
+/* 悬停公司：在脊柱上标出“成立 → 上市”区间 */
+.span{position:absolute;width:8px;margin-left:-4px;border-radius:4px;background:var(--amber);opacity:0;transition:opacity .2s}
+.span.on{opacity:.9}
+.spanlab{position:absolute;font-size:11px;font-weight:700;color:#A86A12;background:#fff;padding:0 6px;border-radius:4px;border:1px solid #F1D49B;white-space:nowrap;opacity:0;transform:translateY(-50%);transition:opacity .2s}
+.spanlab.on{opacity:1}
+.card{position:fixed;z-index:40;pointer-events:none;width:260px;background:#1F2328;color:#fff;border-radius:12px;padding:11px 13px;font-size:12px;opacity:0;transition:opacity .15s;box-shadow:0 16px 36px rgba(0,0,0,.3)}
+.card.on{opacity:1}
+.card b{font-size:15px}.card .r{display:flex;justify-content:space-between;gap:12px;margin-top:2px}.card .r span:first-child{color:#A3A7AD}
+.card .reg{margin-top:7px;padding-top:7px;border-top:1px solid #3A4048;color:#E9C27A}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<div class="wrap">
+ <div class="panel head">
+  <div class="row">
+   <span class="ttl">资本市场与百强时间轴</span>
+   <span class="tog on" data-l="com"><i></i>公司</span>
+   <span class="tog on" data-l="pol"><i></i>政策法规</span>
+   <span class="tog on" data-l="mac"><i></i>宏观背景</span>
+   <span class="grades" id="grades"></span>
+   <span class="seg" id="ev"><button data-v="list" class="on">上市日期</button><button data-v="found">成立日期</button></span>
+   <span class="seg" id="colorby"><button data-v="ind" class="on">行业色</button><button data-v="board">板块色</button></span>
+   <input id="q" placeholder="搜索公司">
+   <span class="now"><b id="nowY">1990</b><span id="nowE"></span></span>
+  </div>
+  <div class="nav" id="nav"><div class="rail" id="rail"></div><div class="win" id="win"><span class="lab" id="winlab"></span><i class="h l" data-h="l"></i><i class="h r" data-h="r"></i></div></div>
+  <div class="hint">拖动黄框浏览，拖动两端缩放时间范围，点击轨道直接跳转</div>
+  <div class="legend" id="legend"></div>
+ </div>
+ <div class="panel frame" id="frame"><div class="tl" id="tl"></div></div>
+</div>
+<div class="card" id="card"></div>
+<script src="data.js"></script>
+<script src="extra.js"></script>
+<script>
+if(window.top!==window)document.documentElement.classList.add('embed');
+const C=window.__DATA__.companies, EX=window.__EXTRA__||{};
+const Y0=1978,Y1=2027,PRE=1990;
+let PX=84;
+const yr=d=>d?+d.slice(0,4)+(+d.slice(5,7)-1)/12+((+d.slice(8,10)||1)-1)/365:null;
+const dstr=d=>d?d.slice(0,10).replace(/-/g,'.'):'—';
+const money=v=>v>=1e12?(v/1e12).toFixed(2)+'万亿':(v/1e8).toFixed(0)+'亿';
+const POL=[
+ ['1990-12',3,'上海证券交易所开业','新中国第一家证券交易所'],['1991-07',3,'深圳证券交易所开业','沪深两市格局形成'],
+ ['1992-10',2,'国务院证券委、中国证监会成立','资本市场有了统一监管机构'],['1993-12',1,'《公司法》通过','1994-07 施行 · 股份公司的法律基础'],
+ ['1998-12',1,'《证券法》通过','1999-07 施行 · 证券市场基本法'],['2001-03',3,'股票发行核准制实施','审批制转向核准制','approve'],
+ ['2001-08',4,'独立董事制度指导意见',''],['2002-01',4,'《上市公司治理准则》',''],
+ ['2002-12',3,'QFII 制度推出','境外机构可投资 A 股'],['2004-01',2,'国九条','推进资本市场改革开放和稳定发展'],
+ ['2004-05',3,'中小企业板设立','中小企业上市通道','sme'],['2005-04',3,'股权分置改革启动','A 股走向全流通'],
+ ['2005-10',1,'《公司法》《证券法》修订','2006-01 施行 · 适应股改后的市场'],['2007-01',4,'《上市公司信息披露管理办法》',''],
+ ['2009-10',3,'创业板开板','成长型企业上市通道','gem'],['2010-03',3,'融资融券试点','引入双向交易'],
+ ['2013-11',4,'现金分红监管指引',''],['2014-05',2,'新国九条','促进资本市场健康发展、多层次资本市场'],
+ ['2014-11',3,'沪港通开通','互联互通'],['2016-12',3,'深港通开通','互联互通扩展到深市'],
+ ['2018-09',4,'修订《上市公司治理准则》',''],['2019-07',3,'科创板开板 · 注册制试点','注册制改革起步','star'],
+ ['2019-12',1,'新《证券法》通过','2020-03 施行 · 全面推行注册制的法律基础'],['2020-08',3,'创业板注册制','注册制扩展至创业板','gemreg'],
+ ['2020-10',2,'提高上市公司质量的意见','国务院文件'],['2020-12',4,'沪深交易所退市新规',''],
+ ['2021-07',2,'依法从严打击证券违法活动的意见','中办国办文件'],['2021-11',3,'北京证券交易所开市','服务创新型中小企业'],
+ ['2022-04',1,'《期货和衍生品法》通过','2022-08 施行 · 衍生品市场基本法'],['2023-02',3,'全面实行注册制','注册制覆盖全市场','fullreg'],
+ ['2023-08',4,'《上市公司独立董事管理办法》',''],['2023-12',1,'新《公司法》修订通过','2024-07 施行 · 治理结构全面修订'],
+ ['2024-04',2,'新“国九条”','强监管、防风险、严退市、重分红'],['2024-05',4,'股东减持股份管理暂行办法','']
+].map(([d,g,t,m,link],i)=>({i,d,y:yr(d+'-15'),g,t,m,link}));
+const GRADE={1:['一级 · 法律','#7A2335'],2:['二级 · 顶层政策','#D99A1E'],3:['三级 · 市场制度','#2F6F73'],4:['四级 · 监管规则','#8A9099']};
+const MACRO=[['1978-12',null,'改革开放'],['1992-01',null,'南方谈话'],['2001-12',null,'加入 WTO'],['2008-09','2009-06','全球金融危机'],['2015-06','2016-01','股市异常波动'],['2020-01','2022-12','新冠疫情']];
+const ERAS=[[1978,1990.95,'起步期','#C9CCD1'],[1990.95,2005.3,'交易所建立与规范','#E9C27A'],[2005.3,2019.55,'股改与扩容','#8A9099'],[2019.55,2027,'注册制时代','#D99A1E']];
+const GROUP={银行:'金融',非银金融:'金融',食品饮料:'消费',家用电器:'消费',汽车:'消费',农林牧渔:'消费',石油石化:'能源资源',煤炭:'能源资源',有色金属:'能源资源',基础化工:'能源资源',电子:'科技',计算机:'科技',通信:'科技',医药生物:'医药',电力设备:'工业与公用',机械设备:'工业与公用',国防军工:'工业与公用',交通运输:'工业与公用',建筑装饰:'工业与公用',公用事业:'工业与公用'};
+const GCOL={金融:'#1F2328',消费:'#C9861A',能源资源:'#7A5C2E',科技:'#2F6F73',工业与公用:'#8A9099',医药:'#E86A54'};
+const BCOL={主板:'#4B5058',创业板:'#C9861A',科创板:'#2F6F73'};
+const HK=/香港联交所|联交所|香港交易所|H股/,HKA=/H股公告|港股公告|翌日披露|证券变动月报表|海外监管公告/;
+const boardOf=k=>k.startsWith('688')?'star':/^30[01]/.test(k)?'gem':/^00[23].*SZ$/.test(k)?'sme':'main';
+const COMS=Object.keys(C).map(k=>{const c=C[k],id=c.identity;return{k,name:id.name_abbr,ind:id.industry_sw1,grp:GROUP[id.industry_sw1]||'工业与公用',board:id.board,bk:boardOf(k),mv:c.market.total_mv||0,f:EX[k]?.found_date,l:id.list_date,ah:HK.test(id.profile||'')||(c.announcements?.items||[]).some(a=>HKA.test(a.title||'')),hay:(id.name_abbr+k+(id.pinyin_abbr||'')).toLowerCase()}}).filter(r=>r.f&&r.l);
+const MAXMV=Math.max(...COMS.map(r=>r.mv)),TOP10=new Set([...COMS].sort((a,b)=>b.mv-a.mv).slice(0,10).map(r=>r.k));
+function regime(r){const y=yr(r.l);if(r.bk==='star')return['科创板注册制','star'];if(r.bk==='gem'&&r.l>='2020-08-24')return['创业板注册制','gemreg'];if(r.l>='2023-02-17')return['全面注册制','fullreg'];if(y<2001.17)return['审批制（额度 / 指标管理）',null];return['核准制'+(y>=2004?'（保荐制）':''),'approve']}
+const LINKTEST={sme:r=>r.bk==='sme',gem:r=>r.bk==='gem',star:r=>r.bk==='star',gemreg:r=>regime(r)[1]==='gemreg',fullreg:r=>['fullreg','star','gemreg'].includes(regime(r)[1]),approve:r=>regime(r)[1]==='approve'};
+const st={com:true,pol:true,mac:true,grades:new Set([1,2,3,4]),ev:'list',color:'ind',q:''};
+const frame=document.getElementById('frame'),tl=document.getElementById('tl'),card=document.getElementById('card');
+let W=0,SX=0,polEls=[],comEls=[],dots=[];
+const TOP=44;
+const COM_GAP=150;   // 公司区与脊柱之间的留白（放日期标签）
+const MIN_PX=72;     // 每年最小像素高度：黄框可拉的最大年数 = 框高 / MIN_PX，保证公司不挤
+// 1990 年前事件稀少，按 0.4 倍压缩
+const Y=y=>TOP+(y<PRE?(y-Y0)*PX*.4:(PRE-Y0)*PX*.4+(y-PRE)*PX);
+const Yinv=v=>{v-=TOP;const a=(PRE-Y0)*PX*.4;return v<a?Y0+v/(PX*.4):PRE+(v-a)/PX};
+function build(keepYear){
+  W=tl.clientWidth;SX=Math.round(W*.5);
+  // 缩得很小时卡片只留标题，减少向下错开
+  tl.classList.toggle('compact',PX<60);
+  let h='';
+  h+=MACRO.map(([a,b,n])=>b?`<div class="macro" style="top:${Y(yr(a+'-01'))}px;height:${Y(yr(b+'-28'))-Y(yr(a+'-01'))}px"><span>${n} ${a.slice(0,4)}–${b.slice(0,4)}</span></div>`:`<div class="macro pt" style="top:${Y(yr(a+'-15'))}px"><span>${n} ${a.replace('-','.')}</span></div>`).join('');
+  h+=ERAS.map(([a,b,n,c])=>`<div class="spine" style="left:${SX-2}px;top:${Y(a)}px;height:${Y(Math.min(b,Y1))-Y(a)}px;background:${c}"></div><div class="eralab" style="top:${Y(a)+2}px;--c:${c}">${n}</div>`).join('');
+  for(let y=1980;y<=2026;y++){if(y<PRE&&y%5)continue;h+=`<div class="yt${y%5?'':' big'}" style="left:${SX}px;top:${Y(y)}px">${y}</div>`}
+  h+=`<div class="lanehead" style="right:${W-SX+30}px">制度演进</div><div class="lanehead" style="left:${SX+COM_GAP}px">公司进度</div>`;
+  h+=POL.map(p=>`<div class="sdot" data-i="${p.i}" style="left:${SX}px;top:${Y(p.y)}px;width:${[0,12,11,9,7][p.g]}px;height:${[0,12,11,9,7][p.g]}px;background:${GRADE[p.g][1]}"></div>`).join('');
+  h+=POL.map(p=>p.g<=2?`<div class="it pol g${p.g}" data-i="${p.i}"><div class="dt">${p.d.replace('-','.')}</div><div class="t">${p.t}</div>${p.m?`<div class="m">${p.m}</div>`:''}</div>`:`<div class="it pol g${p.g}" data-i="${p.i}"><span class="dt">${p.d.replace('-','.')}</span>${p.t}</div>`).join('');
+  h+=COMS.map(r=>`<div class="it bub${r.ah?' ah':''}" data-k="${r.k}"><span class="c"></span><span class="n">${r.name}</span></div>`).join('');
+  h+='<div class="span" id="span"></div><div class="spanlab" id="sl1"></div><div class="spanlab" id="sl2"></div><svg class="ov" id="ov"></svg>';
+  tl.innerHTML=h;
+  polEls=[...tl.querySelectorAll('.pol')];comEls=[...tl.querySelectorAll('.bub')];dots=[...tl.querySelectorAll('.sdot')];
+  const hPol=layoutPol(),hCom=layoutCom();
+  tl.style.height=Math.max(Y(Y1),hPol,hCom)+30+'px';
+  tl.querySelector('#ov').setAttribute('width',W);tl.querySelector('#ov').setAttribute('height',tl.style.height);
+  if(keepYear!=null)frame.scrollTop=Y(keepYear)-TOP;
+  railBuild();reveal();onScroll();
+}
+/* 政策：两条道各自排布，互不挤压；不画常驻引线，脊柱上的彩色圆点即精确日期，悬停时才画连接线 */
+function layoutPol(){
+  const lanes={outer:-1e9,inner:-1e9};let maxB=0;
+  POL.forEach((p,idx)=>{const el=polEls[idx],vis=st.grades.has(p.g);el.classList.toggle('gone',!vis);dots[idx].style.display=vis?'':'none';if(!vis)return;
+    const lane=p.g<=2?'outer':'inner',hh=el.offsetHeight,w=el.offsetWidth,want=Y(p.y);
+    const top=Math.max(want-hh/2,lanes[lane]+6);lanes[lane]=top+hh;maxB=Math.max(maxB,top+hh);
+    const right=lane==='inner'?SX-22:SX-22-268;el.style.left=(right-w)+'px';el.style.top=top+'px';el.style.setProperty('--d',((idx%10)*35)+'ms');
+    el.dataset.ex=right;el.dataset.ey=top+hh/2;el.dataset.want=want});
+  return maxB;
+}
+/* 公司：纵向 = 精确日期，横向蜂群错落 */
+function layoutCom(){
+  const placed=[];let maxB=0;
+  COMS.map((r,i)=>({r,i,y:Y(yr(st.ev==='list'?r.l:r.f))})).sort((a,b)=>a.y-b.y).forEach(({r,i,y},n)=>{
+    const el=comEls[i],rad=Math.round(7+18*Math.sqrt(r.mv/MAXMV)),inside=TOP10.has(r.k),lw=inside?0:r.name.length*12.5+8,col=st.color==='ind'?GCOL[r.grp]:(BCOL[r.board]||'#4B5058');
+    const c=el.querySelector('.c');c.style.width=c.style.height=rad*2+'px';c.style.setProperty('--c',col);c.textContent=inside?r.name.slice(0,2):'';el.querySelector('.n').style.display=inside?'none':'';
+    // 气泡离脊柱留出 COM_GAP，给悬停时的“成立 / 上市”日期标签让位；
+    // 碰撞盒含 A+H 外环与悬停放大的余量；右侧放不下时向下微移再找，保证不重叠
+    const pad=r.ah?6:4,x0=SX+COM_GAP;let x=x0,yy=y;
+    const box=()=>({x0:x-pad,x1:x+rad*2+lw+pad,y0:yy-rad-pad,y1:yy+rad+pad});
+    const hit=()=>{const b=box();return placed.some(p=>b.x0<p.x1&&b.x1>p.x0&&b.y0<p.y1&&b.y1>p.y0)};
+    for(let g=0;g<2000&&hit();g++){x+=6;if(box().x1>W-10){x=x0;yy+=4}}
+    placed.push(box());maxB=Math.max(maxB,yy+rad);el.style.left=x+'px';el.style.top=(yy-rad)+'px';el.style.setProperty('--d',((n%12)*30)+'ms')});
+  filter();return maxB;
+}
+function filter(){const q=st.q.toLowerCase();tl.classList.toggle('dimc',!!q);comEls.forEach((el,i)=>el.classList.toggle('hl',!!q&&COMS[i].hay.includes(q)))}
+function reveal(){const lim=frame.getBoundingClientRect().bottom-20;[...polEls,...comEls].forEach(el=>{if(!el.classList.contains('in')&&el.getBoundingClientRect().top<lim)el.classList.add('in')})}
+/* ---------- 全景导航条 ---------- */
+const rail=document.getElementById('rail'),win=document.getElementById('win'),nav=document.getElementById('nav');
+const RX=y=>(y-Y0)/(Y1-Y0)*100;
+function railBuild(){
+  rail.innerHTML=ERAS.map(([a,b,n,c])=>`<div class="era" style="left:${RX(a)}%;width:${RX(Math.min(b,Y1))-RX(a)}%;background:${c}"></div>`).join('')
+   +POL.filter(p=>st.grades.has(p.g)&&p.g<=3).map(p=>`<div class="tick" style="left:${RX(p.y)}%;background:${GRADE[p.g][1]}"></div>`).join('');
+  nav.querySelectorAll('.yl').forEach(e=>e.remove());
+  [1980,1990,2000,2010,2020].forEach(y=>nav.insertAdjacentHTML('beforeend',`<div class="yl" style="left:${RX(y)}%">${y}</div>`));
+}
+function onScroll(){
+  const a=Yinv(frame.scrollTop),b=Yinv(frame.scrollTop+frame.clientHeight),mid=Math.max(1979,Math.min(2026,Math.floor(Yinv(frame.scrollTop+frame.clientHeight*.4))));
+  win.style.left=RX(Math.max(Y0,a))+'%';win.style.width=Math.max(2,RX(Math.min(Y1,b))-RX(Math.max(Y0,a)))+'%';
+  document.getElementById('winlab').textContent=`${Math.floor(Math.max(Y0,a))}–${Math.ceil(Math.min(2026,b))}`;
+  document.getElementById('nowY').textContent=mid;document.getElementById('nowE').textContent=(ERAS.find(e=>mid>=Math.floor(e[0])&&mid<e[1])||ERAS[0])[2];
+}
+frame.addEventListener('scroll',()=>{onScroll();reveal()},{passive:true});
+const yAtClient=x=>{const r=nav.getBoundingClientRect();return Y0+Math.max(0,Math.min(1,(x-r.left)/r.width))*(Y1-Y0)};
+rail.addEventListener('click',e=>{const y=yAtClient(e.clientX),span=Yinv(frame.scrollTop+frame.clientHeight)-Yinv(frame.scrollTop);frame.scrollTo({top:Y(y-span/2)-TOP,behavior:'smooth'})});
+// 拖动视窗 = 滚动；拖动两端 = 缩放（改变每年的像素高度）
+let drag=null;
+win.addEventListener('pointerdown',e=>{e.preventDefault();win.setPointerCapture(e.pointerId);const a=Yinv(frame.scrollTop),b=Yinv(frame.scrollTop+frame.clientHeight);drag={mode:e.target.dataset.h||'move',x0:e.clientX,a,b}});
+win.addEventListener('pointermove',e=>{if(!drag)return;const r=nav.getBoundingClientRect(),dy=(e.clientX-drag.x0)/r.width*(Y1-Y0);
+  if(drag.mode==='move'){frame.scrollTop=Y(drag.a+dy)-TOP}
+  else{let a=drag.a,b=drag.b;if(drag.mode==='l')a=Math.min(b-3,drag.a+dy);else b=Math.max(a+3,drag.b+dy);
+    win.style.left=RX(Math.max(Y0,a))+'%';win.style.width=RX(Math.min(Y1,b))-RX(Math.max(Y0,a))+'%';const maxSpan=frame.clientHeight/MIN_PX;if(b-a>maxSpan){if(drag.mode==='l')a=b-maxSpan;else b=a+maxSpan}
+    win.style.left=RX(Math.max(Y0,a))+'%';win.style.width=RX(Math.min(Y1,b))-RX(Math.max(Y0,a))+'%';drag.pending={a,span:Math.max(3,b-a)}}});
+win.addEventListener('pointerup',()=>{if(drag&&drag.pending){const{a,span}=drag.pending;PX=Math.max(MIN_PX,Math.min(260,frame.clientHeight/span));build(Math.max(Y0,a))}drag=null});
+/* ---------- 悬停 ---------- */
+const ov=()=>tl.querySelector('#ov');
+tl.addEventListener('mouseover',e=>{
+  const b=e.target.closest('.bub'),p=e.target.closest('.pol');
+  if(b){const r=COMS[comEls.indexOf(b)],[rg,link]=regime(r),y1=Y(yr(r.f)),y2=Y(yr(r.l)),sp=tl.querySelector('#span'),l1=tl.querySelector('#sl1'),l2=tl.querySelector('#sl2');
+    sp.style.left=SX+'px';sp.style.top=Math.min(y1,y2)+'px';sp.style.height=Math.abs(y2-y1)+'px';sp.classList.add('on');
+    l1.textContent='成立 '+dstr(r.f);l1.style.left=(SX+10)+'px';l1.style.top=y1+'px';l2.textContent='上市 '+dstr(r.l);l2.style.left=(SX+10)+'px';l2.style.top=y2+'px';l1.classList.add('on');l2.classList.add('on');
+    polEls.forEach(el=>el.classList.toggle('hl',!!link&&POL[+el.dataset.i].link===link));
+    card.innerHTML=`<b>${r.name}</b> <span style="color:#A3A7AD">${r.k}</span><div class="r"><span>行业</span><span>${r.ind}</span></div><div class="r"><span>成立 → 上市</span><span>${dstr(r.f)} → ${dstr(r.l)}</span></div><div class="r"><span>间隔</span><span>${(yr(r.l)-yr(r.f)).toFixed(1)} 年</span></div><div class="r"><span>上市地</span><span>${r.k.endsWith('SH')?'上交所':'深交所'}${r.ah?' + 港股':''}</span></div><div class="r"><span>总市值</span><span>${money(r.mv)}</span></div><div class="reg">上市时发行制度：${rg}</div>`;show(e)}
+  else if(p){const ev=POL[+p.dataset.i],ex=+p.dataset.ex,ey=+p.dataset.ey,want=+p.dataset.want;
+    ov().innerHTML=`<path class="guide" d="M${ex} ${ey} L ${ex+8} ${ey} L ${SX-14} ${want} L ${SX-6} ${want}"/>`;dots[ev.i].classList.add('on');
+    card.innerHTML=`<span style="color:#A3A7AD">${GRADE[ev.g][0]} · ${ev.d.replace('-','.')}</span><br><b>${ev.t}</b>${ev.m?`<div style="margin-top:3px;color:#D6D8DB">${ev.m}</div>`:''}${ev.link?'<div class="reg">右侧已高亮相关公司</div>':''}`;show(e);
+    if(ev.link){tl.classList.add('dimc');comEls.forEach((el,i)=>el.classList.toggle('hl',LINKTEST[ev.link](COMS[i])))}}
+});
+tl.addEventListener('mouseout',e=>{if(e.target.closest('.bub,.pol')&&!e.relatedTarget?.closest?.('.bub,.pol')){card.classList.remove('on');tl.querySelectorAll('.span,.spanlab').forEach(x=>x.classList.remove('on'));ov().innerHTML='';dots.forEach(d=>d.classList.remove('on'));polEls.forEach(el=>el.classList.remove('hl'));filter()}});
+tl.addEventListener('mousemove',e=>{if(card.classList.contains('on'))place(e)});
+tl.addEventListener('click',e=>{const b=e.target.closest('.bub');if(!b)return;if(window.top!==window)window.top.location.hash='#/'+b.dataset.k;else location.href='index.html#/'+b.dataset.k});
+function show(e){card.classList.add('on');place(e)}
+function place(e){card.style.left=Math.min(e.clientX+18,innerWidth-280)+'px';card.style.top=Math.min(e.clientY+18,innerHeight-190)+'px'}
+/* ---------- 控件 ---------- */
+document.getElementById('grades').innerHTML=Object.entries(GRADE).map(([g,[n,c]])=>`<span class="gchip" data-g="${g}" style="--c:${c}"><b></b>${n}</span>`).join('');
+document.getElementById('grades').onclick=e=>{const c=e.target.closest('.gchip');if(!c)return;const g=+c.dataset.g;st.grades.has(g)?st.grades.delete(g):st.grades.add(g);c.classList.toggle('off',!st.grades.has(g));layoutPol();railBuild()};
+document.querySelectorAll('.tog').forEach(t=>t.onclick=()=>{const l=t.dataset.l;st[l]=!st[l];t.classList.toggle('on',st[l]);
+  const list=l==='pol'?polEls:l==='com'?comEls:[];list.forEach((el,i)=>el.style.setProperty('--d',((i%12)*30)+'ms'));
+  tl.classList.toggle(l==='pol'?'pol-off':l==='com'?'com-off':'macro-off',!st[l]);document.getElementById('grades').classList.toggle('off',!st.pol)});
+const seg=(id,key,after)=>document.getElementById(id).onclick=e=>{const b=e.target.closest('button');if(!b)return;st[key]=b.dataset.v;document.querySelectorAll('#'+id+' button').forEach(x=>x.classList.toggle('on',x===b));after()};
+seg('ev','ev',()=>{const h=layoutCom();tl.style.height=Math.max(Y(Y1),h)+30+'px'});seg('colorby','color',()=>{layoutCom();legend()});
+document.getElementById('q').oninput=e=>{st.q=e.target.value.trim();filter()};
+function legend(){document.getElementById('legend').innerHTML=(st.color==='ind'?Object.entries(GCOL):Object.entries(BCOL)).map(([n,c])=>`<span><i style="background:${c}"></i>${n}</span>`).join('')+'<span><i style="background:#fff;box-shadow:0 0 0 2px #E86A54"></i>A+H</span><span>气泡大小 = 总市值 · 悬停公司在脊柱上标出成立 → 上市区间</span>'}
+legend();build(1989);
+requestAnimationFrame(()=>tl.classList.add('loaded'));
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>build(Yinv(frame.scrollTop)),200)});
+const focus=(window.parent!==window&&parent.__TL_FOCUS__)||new URLSearchParams(location.search).get('c');
+if(focus)setTimeout(()=>{const el=comEls.find(x=>x.dataset.k===focus);if(el){frame.scrollTop=el.offsetTop-frame.clientHeight/2;el.classList.add('hl')}},400);
+</script>
+</body></html>

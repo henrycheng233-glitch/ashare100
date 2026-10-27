@@ -1,0 +1,1029 @@
+{
+  "meta": {
+    "collected_date": "2026-10-23",
+    "source": "Saved Eastmoney RPT_F10_BASIC_ORGINFO response",
+    "company_count": 100,
+    "registered_capital_unit": "10,000 units of the stated currency",
+    "note": "Supplement for screenshot assignment; fields outside the v1.1 A JSON schema.",
+    "missing_legal_representative_codes": [
+      "600941.SH",
+      "688347.SH"
+    ],
+    "legal_representative_overrides": {
+      "688820.SH": {
+        "name": "崔东",
+        "source": "https://star.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=688820"
+      }
+    },
+    "legal_representative_not_applicable": {
+      "600941.SH": "SSE company profile shows '-' for the Hong Kong-incorporated listed issuer.",
+      "688347.SH": "2026 interim report explicitly states not applicable; Hong Kong-incorporated listed issuer has no legal representative. Bai Peng is board chairman."
+    },
+    "registered_capital_currencies": {
+      "人民币": 97,
+      "美元": 3
+    }
+  },
+  "companies": {
+    "601398.SH": {
+      "name_full": "中国工商银行股份有限公司",
+      "found_date": "1985-11-22",
+      "list_date": "2006-10-27",
+      "legal_representative": "廖林",
+      "registered_capital_10k": 35640625.7089,
+      "registered_capital_currency": "人民币",
+      "employees": 402548,
+      "main_business": "提供银行及相关金融服务。"
+    },
+    "688825.SH": {
+      "name_full": "长鑫科技集团股份有限公司",
+      "found_date": "2016-06-13",
+      "list_date": "2026-07-27",
+      "legal_representative": "赵纶",
+      "registered_capital_10k": 6788409.9077,
+      "registered_capital_currency": "人民币",
+      "employees": 19298,
+      "main_business": "DRAM产品的研发、设计、生产及销售"
+    },
+    "601288.SH": {
+      "name_full": "中国农业银行股份有限公司",
+      "found_date": "1986-12-18",
+      "list_date": "2010-07-15",
+      "legal_representative": "谷澍",
+      "registered_capital_10k": 34998303.3873,
+      "registered_capital_currency": "人民币",
+      "employees": 446913,
+      "main_business": "吸收公众存款;发放短期、中期和长期贷款;办理国内外结算;办理票据承兑与贴现;发行金融债券;代理发行、代理兑付、承销政府债券;买卖政府债券、金融债券;从事同业拆借;买卖、代理买卖外汇;从事银行卡业务;提供信用证服务及担保;代理收付款项业务;提供保管箱服务;经营结汇、售汇业务;经国务院银行业监督管理机构批准的其他业务及境外机构所在有关监管机构所批准经营的业务。"
+    },
+    "601939.SH": {
+      "name_full": "中国建设银行股份有限公司",
+      "found_date": "2004-09-17",
+      "list_date": "2007-09-25",
+      "legal_representative": "张金良",
+      "registered_capital_10k": 26160038.1459,
+      "registered_capital_currency": "人民币",
+      "employees": 373430,
+      "main_business": "公司金融业务、个人金融业务、资金资管业务和包括境外业务在内的其他业务"
+    },
+    "601857.SH": {
+      "name_full": "中国石油天然气股份有限公司",
+      "found_date": "1999-11-05",
+      "list_date": "2007-11-05",
+      "legal_representative": "戴厚良",
+      "registered_capital_10k": 18302097.7818,
+      "registered_capital_currency": "人民币",
+      "employees": 361426,
+      "main_business": "原油及天然气的勘探、开发、生产、输送和销售及新能源业务;原油及石油产品的炼制,基本及衍生化工产品、其他化工产品的生产和销售及新材料业务;炼油产品和非油品的销售以及贸易业务;天然气的输送及销售业务"
+    },
+    "601988.SH": {
+      "name_full": "中国银行股份有限公司",
+      "found_date": "1983-10-31",
+      "list_date": "2006-07-05",
+      "legal_representative": "葛海蛟",
+      "registered_capital_10k": 32221241.1814,
+      "registered_capital_currency": "人民币",
+      "employees": 310898,
+      "main_business": "从事全面的公司金融业务、个人金融业务、资金业务、投资银行业务、保险业务和其他业务"
+    },
+    "600519.SH": {
+      "name_full": "贵州茅台酒股份有限公司",
+      "found_date": "1999-11-20",
+      "list_date": "2001-08-27",
+      "legal_representative": "陈华",
+      "registered_capital_10k": 125008.1601,
+      "registered_capital_currency": "人民币",
+      "employees": 34992,
+      "main_business": "茅台酒及系列酒的生产与销售"
+    },
+    "600941.SH": {
+      "name_full": "中国移动有限公司",
+      "found_date": "1997-09-03",
+      "list_date": "2022-01-05",
+      "legal_representative": null,
+      "registered_capital_10k": 2169589.0446,
+      "registered_capital_currency": "人民币",
+      "employees": 457000,
+      "main_business": "涵盖包括移动通信、宽带网络、蜂窝物联和卫星互联的通信服务,数据中心、移动云和移动云应用的算力服务,以及数据算法、具身智能、数智文化、数智电商和行业数智服务的智能服务"
+    },
+    "600036.SH": {
+      "name_full": "招商银行股份有限公司",
+      "found_date": "1987-03-31",
+      "list_date": "2002-04-09",
+      "legal_representative": "缪建民",
+      "registered_capital_10k": 2521984.5601,
+      "registered_capital_currency": "人民币",
+      "employees": 121959,
+      "main_business": "主要业务分部包括零售金融业务和批发金融业务。零售金融业务主要有财富管理业务,私人银行业务,信用卡业务,零售贷款。批发金融业务主要有批发客户,公司客户存款,公司贷款,科技金融业务,普惠金融业务,养老金融业务,票据业务,交易银行业务,跨境金融业务,投资银行业务,同业业务,资产管理业务,资产托管业务,金融市场业务。"
+    },
+    "300750.SZ": {
+      "name_full": "宁德时代新能源科技股份有限公司",
+      "found_date": "2011-12-16",
+      "list_date": "2018-06-11",
+      "legal_representative": "曾毓群",
+      "registered_capital_10k": 462724.9686,
+      "registered_capital_currency": "人民币",
+      "employees": 185839,
+      "main_business": "从事动力电池、储能电池的研发、生产、销售,以推动固定式化石能源替代、移动式化石能源替代,并通过电动化和智能化实现市场应用的集成创新"
+    },
+    "601088.SH": {
+      "name_full": "中国神华能源股份有限公司",
+      "found_date": "2004-11-08",
+      "list_date": "2007-10-09",
+      "legal_representative": "吕志韧",
+      "registered_capital_10k": 2168943.4304,
+      "registered_capital_currency": "人民币",
+      "employees": 126036,
+      "main_business": "煤炭、电力的生产和销售,铁路、港口和船舶运输,煤制烯烃等业务。"
+    },
+    "600938.SH": {
+      "name_full": "中国海洋石油有限公司",
+      "found_date": "1999-08-20",
+      "list_date": "2022-04-21",
+      "legal_representative": "张传江",
+      "registered_capital_10k": 4752995.3984,
+      "registered_capital_currency": "人民币",
+      "employees": 23084,
+      "main_business": "勘探、开发、生产及销售原油和天然气"
+    },
+    "601138.SH": {
+      "name_full": "富士康工业互联网股份有限公司",
+      "found_date": "2015-03-06",
+      "list_date": "2018-06-08",
+      "legal_representative": "郑弘孟",
+      "registered_capital_10k": 1984409.2284,
+      "registered_capital_currency": "人民币",
+      "employees": 217084,
+      "main_business": "公司是全球领先的高端智能制造及工业互联网解决方案服务商,主要业务包含云计算、通信网络及移动网络设备、工业互联网。"
+    },
+    "601318.SH": {
+      "name_full": "中国平安保险(集团)股份有限公司",
+      "found_date": "1988-03-21",
+      "list_date": "2007-03-01",
+      "legal_representative": "马明哲",
+      "registered_capital_10k": 1810764.1995,
+      "registered_capital_currency": "人民币",
+      "employees": 258806,
+      "main_business": "从事金融业,提供多元化的金融产品及服务"
+    },
+    "601628.SH": {
+      "name_full": "中国人寿保险股份有限公司",
+      "found_date": "2003-06-30",
+      "list_date": "2007-01-09",
+      "legal_representative": "利明光",
+      "registered_capital_10k": 2826470.5,
+      "registered_capital_currency": "人民币",
+      "employees": 96257,
+      "main_business": "主要从事人寿保险、健康保险、意外伤害保险等各类人身保险业务;人身保险的再保险业务;国家法律、法规允许或国务院批准的资金运用业务;各类人身保险服务、咨询和代理业务;证券投资基金销售业务;国家保险监督管理部门批准的其他业务。"
+    },
+    "300308.SZ": {
+      "name_full": "中际旭创股份有限公司",
+      "found_date": "2005-06-27",
+      "list_date": "2012-04-10",
+      "legal_representative": "刘圣",
+      "registered_capital_10k": 117790.9641,
+      "registered_capital_currency": "人民币",
+      "employees": 11625,
+      "main_business": "高端光通信收发模块的研发、生产及销售,产品服务于云计算数据中心、数据通信、5G无线网络、电信传输和固网接入等领域的国内外客户"
+    },
+    "601899.SH": {
+      "name_full": "紫金矿业集团股份有限公司",
+      "found_date": "2000-09-06",
+      "list_date": "2008-04-25",
+      "legal_representative": "邹来昌",
+      "registered_capital_10k": 265907.9824,
+      "registered_capital_currency": "人民币",
+      "employees": 66708,
+      "main_business": "矿产资源勘查;金矿采选;金冶炼;铜矿采选;铜冶炼;珠宝首饰、矿产品的销售;对采矿业的投资;对外贸易;铜矿金矿露天开采、铜矿地下开采;环境保护专用设备制造;大气污染治理;水污染治理;固体废物治理;垃圾焚烧发电业务及危险废物处置等。"
+    },
+    "600900.SH": {
+      "name_full": "中国长江电力股份有限公司",
+      "found_date": "2002-11-04",
+      "list_date": "2003-11-18",
+      "legal_representative": "刘伟平",
+      "registered_capital_10k": 2446821.7716,
+      "registered_capital_currency": "人民币",
+      "employees": 8482,
+      "main_business": "大型水电运营"
+    },
+    "601328.SH": {
+      "name_full": "交通银行股份有限公司",
+      "found_date": "1987-03-30",
+      "list_date": "2007-05-15",
+      "legal_representative": "任德奇",
+      "registered_capital_10k": 8836378.4223,
+      "registered_capital_currency": "人民币",
+      "employees": 96876,
+      "main_business": "银行和相关金融业务,包括公司金融业务、个人金融业务、资金业务和其他类别业务。公司金融业务主要包括公司贷款、票据、贸易融资、公司存款和汇款。个人金融业务主要包括个人贷款、零售存款、信用卡和汇款。资金业务主要包括货币市场资金拆借和买入、投资类证券以及根据卖出回购协议售出证券。“其他业务”主要包括不能分类为上述业务分部的其他项目。"
+    },
+    "002594.SZ": {
+      "name_full": "比亚迪股份有限公司",
+      "found_date": "1995-02-10",
+      "list_date": "2011-06-30",
+      "legal_representative": "王传福",
+      "registered_capital_10k": 911719.7565,
+      "registered_capital_currency": "人民币",
+      "employees": 869622,
+      "main_business": "从事以新能源汽车为主的汽车业务,手机部件及组装业务,二次充电电池及光伏业务,同时利用自身的技术优势拓展城市轨道交通业务领域"
+    },
+    "601658.SH": {
+      "name_full": "中国邮政储蓄银行股份有限公司",
+      "found_date": "2007-03-06",
+      "list_date": "2019-12-10",
+      "legal_representative": "郑国雨",
+      "registered_capital_10k": 12009505.3492,
+      "registered_capital_currency": "人民币",
+      "employees": 179081,
+      "main_business": "零售金融业务、公司金融业务、资金资管业务"
+    },
+    "000333.SZ": {
+      "name_full": "美的集团股份有限公司",
+      "found_date": "2000-04-07",
+      "list_date": "2013-09-18",
+      "legal_representative": "方洪波",
+      "registered_capital_10k": 763029.2622,
+      "registered_capital_currency": "人民币",
+      "employees": 198570,
+      "main_business": "智能家居、工业技术、楼宇科技、机器人与自动化、新能源、健康医疗、智慧物流等业务"
+    },
+    "600028.SH": {
+      "name_full": "中国石油化工股份有限公司",
+      "found_date": "2000-02-25",
+      "list_date": "2001-08-08",
+      "legal_representative": "侯启军",
+      "registered_capital_10k": 12071447.9172,
+      "registered_capital_currency": "人民币",
+      "employees": 340966,
+      "main_business": "石油与天然气勘探开采、管道运输、销售;石油炼制、石油化工、煤化工、化纤及其他化工产品的生产与销售、储运;石油、天然气、石油产品、石油化工及其他化工产品和其他商品、技术的进出口、代理进出口业务;技术、信息的研究、开发、应用;氢气的制备、储存、运输和销售等氢能业务及相关服务;新能源汽车充换电,太阳能、风能等新能源发电业务及相关服务"
+    },
+    "688256.SH": {
+      "name_full": "中科寒武纪科技股份有限公司",
+      "found_date": "2016-03-15",
+      "list_date": "2020-07-20",
+      "legal_representative": "陈天石",
+      "registered_capital_10k": 62885.4008,
+      "registered_capital_currency": "人民币",
+      "employees": 1107,
+      "main_business": "应用于各类云服务器、边缘计算设备、终端设备中人工智能核心芯片的研发、设计和销售"
+    },
+    "601728.SH": {
+      "name_full": "中国电信股份有限公司",
+      "found_date": "2002-09-10",
+      "list_date": "2021-08-20",
+      "legal_representative": "柯瑞文",
+      "registered_capital_10k": 9150713.8699,
+      "registered_capital_currency": "人民币",
+      "employees": 277911,
+      "main_business": "大型全业务综合智能信息服务运营商,为个人(ToC)、家庭(ToH)和政企(ToB/G)客户提供综合智能信息服务"
+    },
+    "688981.SH": {
+      "name_full": "中芯国际集成电路制造有限公司",
+      "found_date": "2000-04-03",
+      "list_date": "2020-07-16",
+      "legal_representative": "刘训峰",
+      "registered_capital_10k": 3424.9528,
+      "registered_capital_currency": "美元",
+      "employees": 19952,
+      "main_business": "主要从事基于多种技术节点和技术平台的集成电路晶圆代工业务,并提供设计服务与IP支持、光掩模制造等配套服务"
+    },
+    "601998.SH": {
+      "name_full": "中信银行股份有限公司",
+      "found_date": "1987-04-20",
+      "list_date": "2007-04-27",
+      "legal_representative": "方合英",
+      "registered_capital_10k": 5564516.2264,
+      "registered_capital_currency": "人民币",
+      "employees": 67139,
+      "main_business": "向政府与机构客户、企业客户和同业客户提供公司银行业务、投资银行业务、国际业务、交易银行业务、托管业务、金融市场业务等综合金融解决方案;向个人客户提供财富管理业务、个人信贷业务、信用卡业务、私人银行业务、养老金融业务、出国金融业务等多元化金融产品及服务,全方位满足政府与机构、企业、同业及个人客户的综合金融服务需求。"
+    },
+    "688235.SH": {
+      "name_full": "百济神州有限公司",
+      "found_date": "2018-06-28",
+      "list_date": "2021-12-15",
+      "legal_representative": "欧雷强",
+      "registered_capital_10k": 15.4229,
+      "registered_capital_currency": "美元",
+      "employees": 11825,
+      "main_business": "我们是一家覆盖早期药物发现、临床前研究、全球临床试验、自主规模化药物生产与商业化全链条的全球肿瘤创新公司,成立以来建立了完善的组织架构,拥有独立完整的研发、临床、采购、生产、销售等体系"
+    },
+    "603259.SH": {
+      "name_full": "无锡药明康德新药开发股份有限公司",
+      "found_date": "2000-12-01",
+      "list_date": "2018-05-08",
+      "legal_representative": "李革",
+      "registered_capital_10k": 303490.4066,
+      "registered_capital_currency": "人民币",
+      "employees": 35584,
+      "main_business": "全球医药及生命科学行业提供一体化、端到端的新药研发和生产服务,在亚洲、欧洲、北美等地均设有运营基地。公司通过独特的“CRDMO”业务模式,不断降低研发门槛,助力客户提升研发效率,为患者带来更多突破性的治疗方案,服务范围涵盖化学药研发和生产、生物学研究、临床前测试和临床研发等领域。"
+    },
+    "688041.SH": {
+      "name_full": "海光信息技术股份有限公司",
+      "found_date": "2014-10-24",
+      "list_date": "2022-08-12",
+      "legal_representative": "沙超群",
+      "registered_capital_10k": 232433.8091,
+      "registered_capital_currency": "人民币",
+      "employees": 3333,
+      "main_business": "研发、设计和销售应用于服务器、工作站等计算、存储设备中的高端处理器"
+    },
+    "300502.SZ": {
+      "name_full": "成都新易盛通信技术股份有限公司",
+      "found_date": "2008-04-15",
+      "list_date": "2016-03-03",
+      "legal_representative": "高光荣",
+      "registered_capital_10k": 139473.7276,
+      "registered_capital_currency": "人民币",
+      "employees": 8537,
+      "main_business": "全系列光通信应用的光模块的研发、生产和销售"
+    },
+    "002371.SZ": {
+      "name_full": "北方华创科技集团股份有限公司",
+      "found_date": "2001-09-28",
+      "list_date": "2010-03-16",
+      "legal_representative": "赵晋荣",
+      "registered_capital_10k": 72795.3799,
+      "registered_capital_currency": "人民币",
+      "employees": 21101,
+      "main_business": "半导体基础产品的研发、生产、销售和技术服务"
+    },
+    "601166.SH": {
+      "name_full": "兴业银行股份有限公司",
+      "found_date": "1988-08-22",
+      "list_date": "2007-02-05",
+      "legal_representative": "吕家进",
+      "registered_capital_10k": 2116286.4665,
+      "registered_capital_currency": "人民币",
+      "employees": 68442,
+      "main_business": "企业金融业务,零售金融业务,同业和金融市场业务,金融科技"
+    },
+    "002475.SZ": {
+      "name_full": "立讯精密工业股份有限公司",
+      "found_date": "2004-05-24",
+      "list_date": "2010-09-15",
+      "legal_representative": "王来春",
+      "registered_capital_10k": 774322.0883,
+      "registered_capital_currency": "人民币",
+      "employees": 416197,
+      "main_business": "主要从事消费电子、通信及数据中心、汽车、医疗等领域相关零组件、模组及系统集成业务"
+    },
+    "600030.SH": {
+      "name_full": "中信证券股份有限公司",
+      "found_date": "1995-10-25",
+      "list_date": "2003-01-06",
+      "legal_representative": "邹迎光",
+      "registered_capital_10k": 1562427.2212,
+      "registered_capital_currency": "人民币",
+      "employees": 27087,
+      "main_business": "投资银行业务,财富管理业务,机构股票经纪业务,金融市场业务,资产管理业务,投资业务,托管及研究等服务"
+    },
+    "600000.SH": {
+      "name_full": "上海浦东发展银行股份有限公司",
+      "found_date": "1992-10-19",
+      "list_date": "1999-11-10",
+      "legal_representative": "张为忠",
+      "registered_capital_10k": 3330583.83,
+      "registered_capital_currency": "人民币",
+      "employees": 62204,
+      "main_business": "吸收公众存款;发放短期、中期和长期贷款;办理结算;办理票据贴现;发行金融债券;代理发行、代理兑付、承销政府债券,买卖政府债券;同业拆借;提供信用证服务及担保;代理收付款项及代理保险业务;提供保管箱服务;外汇存款;外汇贷款;外汇汇款;外币兑换;国际结算;同业外汇拆借;外汇票据的承兑和贴现;外汇借款;外汇担保;结汇、售汇;买卖和代理买卖股票以外的外币有价证券;自营外汇买卖;代客外汇买卖;银行卡业务;资信调查、咨询、见证业务;离岸银行业务;证券投资基金托管业务;公募证券投资基金销售;经批准的其他业务"
+    },
+    "600276.SH": {
+      "name_full": "江苏恒瑞医药股份有限公司",
+      "found_date": "1997-04-28",
+      "list_date": "2000-10-18",
+      "legal_representative": "孙飘扬",
+      "registered_capital_10k": 663719.9874,
+      "registered_capital_currency": "人民币",
+      "employees": 20602,
+      "main_business": "药品研发、生产和销售"
+    },
+    "601319.SH": {
+      "name_full": "中国人民保险集团股份有限公司",
+      "found_date": "1996-08-22",
+      "list_date": "2018-11-16",
+      "legal_representative": "谭炯",
+      "registered_capital_10k": 4422399.0583,
+      "registered_capital_currency": "人民币",
+      "employees": 179898,
+      "main_business": "财产险板块业务,人身险板块业务,投资板块业务,科技板块业务等"
+    },
+    "002415.SZ": {
+      "name_full": "杭州海康威视数字技术股份有限公司",
+      "found_date": "2001-11-30",
+      "list_date": "2010-05-28",
+      "legal_representative": "胡扬忠",
+      "registered_capital_10k": 916487.155,
+      "registered_capital_currency": "人民币",
+      "employees": 57202,
+      "main_business": "安防视频监控产品研发、生产和销售,产品包括硬盘录像机(DVR)、视音频编解码卡等数据存储及处理设备,以及监控摄像机、监控球机、视频服务器(DVS)等视音频信息采集处理设备。"
+    },
+    "603993.SH": {
+      "name_full": "洛阳栾川钼业集团股份有限公司",
+      "found_date": "1999-12-22",
+      "list_date": "2012-10-09",
+      "legal_representative": "刘建锋",
+      "registered_capital_10k": 427886.2035,
+      "registered_capital_currency": "人民币",
+      "employees": 16122,
+      "main_business": "有色金属的采、选、冶等矿山采掘及加工业务和金属贸易业务"
+    },
+    "600183.SH": {
+      "name_full": "广东生益科技股份有限公司",
+      "found_date": "1985-06-27",
+      "list_date": "1998-10-28",
+      "legal_representative": "陈仁喜",
+      "registered_capital_10k": 242900.367,
+      "registered_capital_currency": "人民币",
+      "employees": 14523,
+      "main_business": "设计、生产和销售覆铜板和粘结片、印制线路板"
+    },
+    "300059.SZ": {
+      "name_full": "东方财富信息股份有限公司",
+      "found_date": "2005-01-20",
+      "list_date": "2010-03-19",
+      "legal_representative": "其实",
+      "registered_capital_10k": 1582219.9875,
+      "registered_capital_currency": "人民币",
+      "employees": 6403,
+      "main_business": "证券业务、金融电子商务服务业务、金融数据服务业务等"
+    },
+    "000858.SZ": {
+      "name_full": "宜宾五粮液股份有限公司",
+      "found_date": "1998-04-21",
+      "list_date": "1998-04-27",
+      "legal_representative": "邓敏",
+      "registered_capital_10k": 388160.8005,
+      "registered_capital_currency": "人民币",
+      "employees": 25216,
+      "main_business": "白酒生产和销售"
+    },
+    "601225.SH": {
+      "name_full": "陕西煤业股份有限公司",
+      "found_date": "2008-12-23",
+      "list_date": "2014-01-28",
+      "legal_representative": "赵福堂",
+      "registered_capital_10k": 969500,
+      "registered_capital_currency": "人民币",
+      "employees": 43455,
+      "main_business": "煤炭、电力的生产和销售以及生产服务等业务,煤炭产品主要用于电力、化工及冶金等行业"
+    },
+    "601211.SH": {
+      "name_full": "国泰海通证券股份有限公司",
+      "found_date": "1999-08-18",
+      "list_date": "2015-06-26",
+      "legal_representative": "朱健",
+      "registered_capital_10k": 1758105.7948,
+      "registered_capital_currency": "人民币",
+      "employees": 25921,
+      "main_business": "以客户需求为驱动,打造了零售、机构及企业客户服务体系,形成包括财富管理业务、投资银行业务、机构与交易业务、投资管理业务和融资租赁业务在内的业务板块"
+    },
+    "688012.SH": {
+      "name_full": "中微半导体设备(上海)股份有限公司",
+      "found_date": "2004-05-31",
+      "list_date": "2019-07-22",
+      "legal_representative": "GERALD ZHEYAO YIN(尹志尧)",
+      "registered_capital_10k": 95784.2348,
+      "registered_capital_currency": "人民币",
+      "employees": 2963,
+      "main_business": "高端半导体设备及泛半导体设备的研发、生产和销售"
+    },
+    "600150.SH": {
+      "name_full": "中国船舶工业股份有限公司",
+      "found_date": "1998-05-12",
+      "list_date": "1998-05-20",
+      "legal_representative": "胡贤甫",
+      "registered_capital_10k": 752562.1288,
+      "registered_capital_currency": "人民币",
+      "employees": 41839,
+      "main_business": "造船业务(军、民)、修船业务、海洋工程及机电设备等"
+    },
+    "601601.SH": {
+      "name_full": "中国太平洋保险(集团)股份有限公司",
+      "found_date": "1991-05-13",
+      "list_date": "2007-12-25",
+      "legal_representative": "傅帆",
+      "registered_capital_10k": 962034.1455,
+      "registered_capital_currency": "人民币",
+      "employees": 91639,
+      "main_business": "公司通过旗下子公司提供各类风险保障、财富规划以及资产管理等产品和服务。公司主要通过太保寿险为客户提供人身保险产品和服务;通过太保产险、太平洋安信农险为客户提供财产保险产品和服务;通过太平洋健康险为客户提供健康险产品及健康管理服务;通过太保资产开展保险资金运用以及第三方资产管理业务;通过长江养老开展养老金融服务及相关资产管理业务;通过太保资本开展私募基金管理业务及相关咨询服务;通过国联安基金开展公募基金管理业务;通过太保科技提供市场化科技赋能支持和服务"
+    },
+    "601816.SH": {
+      "name_full": "京沪高速铁路股份有限公司",
+      "found_date": "2008-01-09",
+      "list_date": "2020-01-16",
+      "legal_representative": "李敬伟",
+      "registered_capital_10k": 4892567.937,
+      "registered_capital_currency": "人民币",
+      "employees": 89,
+      "main_business": "高铁旅客运输,具体主要包括:(1)为乘坐担当列车的旅客提供高铁运输服务并收取票价款;(2)其他铁路运输企业担当的列车在京沪高速铁路上运行时,向其提供线路使用、接触网使用等服务并收取相应费用等。"
+    },
+    "601919.SH": {
+      "name_full": "中远海运控股股份有限公司",
+      "found_date": "2007-01-05",
+      "list_date": "2007-06-26",
+      "legal_representative": "万敏",
+      "registered_capital_10k": 1521832.4687,
+      "registered_capital_currency": "人民币",
+      "employees": 32768,
+      "main_business": "国内集装箱运输服务及相关业务以及从事集装箱和散杂货码头的装卸和堆存业务"
+    },
+    "002714.SZ": {
+      "name_full": "牧原食品集团股份有限公司",
+      "found_date": "2000-07-13",
+      "list_date": "2014-01-28",
+      "legal_representative": "曹治年",
+      "registered_capital_10k": 577299.6144,
+      "registered_capital_currency": "人民币",
+      "employees": 127550,
+      "main_business": "生猪的养殖销售、生猪屠宰"
+    },
+    "300394.SZ": {
+      "name_full": "苏州天孚光通信股份有限公司",
+      "found_date": "2005-07-20",
+      "list_date": "2015-02-17",
+      "legal_representative": "邹支农",
+      "registered_capital_10k": 109082.5093,
+      "registered_capital_currency": "人民币",
+      "employees": 5127,
+      "main_business": "以研发创新为驱动,依托高复用的技术平台与深度的产业链垂直整合能力,提供从无源器件、有源器件到集成共研的一站式光互连解决方案"
+    },
+    "002142.SZ": {
+      "name_full": "宁波银行股份有限公司",
+      "found_date": "1997-04-10",
+      "list_date": "2007-07-19",
+      "legal_representative": "庄灵君",
+      "registered_capital_10k": 660359.0792,
+      "registered_capital_currency": "人民币",
+      "employees": 24857,
+      "main_business": "对公及对私存款、贷款、支付结算、资金业务、并提供资产管理及其他金融业务"
+    },
+    "002384.SZ": {
+      "name_full": "苏州东山精密制造股份有限公司",
+      "found_date": "1998-10-28",
+      "list_date": "2010-04-09",
+      "legal_representative": "袁永刚",
+      "registered_capital_10k": 183160.7532,
+      "registered_capital_currency": "人民币",
+      "employees": 39245,
+      "main_business": "电子电路、光模块(含光芯片)、精密组件、光电显示模组的全球设计、生产和销售"
+    },
+    "600919.SH": {
+      "name_full": "江苏银行股份有限公司",
+      "found_date": "2007-01-22",
+      "list_date": "2016-08-02",
+      "legal_representative": "袁军",
+      "registered_capital_10k": 1835132.4463,
+      "registered_capital_currency": "人民币",
+      "employees": 21062,
+      "main_business": "1.对公业务:服务实体经济、绿色金融、交易银行、普惠金融、跨境金融、投行业务、网络金融;2.零售业务:财富管理、养老金融、消费金融、智慧零售;3.金融市场业务:资金业务、同业业务、托管业务;4.金融科技:加速数字金融建设、加强数字化运营、聚焦核心能力打造"
+    },
+    "000001.SZ": {
+      "name_full": "平安银行股份有限公司",
+      "found_date": "1987-12-22",
+      "list_date": "1991-04-03",
+      "legal_representative": "谢永林",
+      "registered_capital_10k": 1940591.8198,
+      "registered_capital_currency": "人民币",
+      "employees": 41043,
+      "main_business": "(一)吸收公众存款;(二)发放短期、中期和长期贷款;(三)办理国内外结算;(四)办理票据承兑与贴现;(五)发行金融债券;(六)代理发行、代理兑付、承销政府债券;(七)买卖政府债券、金融债券;(八)从事同业拆借;(九)买卖、代理买卖外汇;(十)从事银行卡业务;(十一)提供信用证服务及担保;(十二)代理收付款项及代理保险业务;(十三)提供保管箱服务;(十四)结汇、售汇业务;(十五)离岸银行业务;(十六)资产托管业务;(十七)办理黄金业务;(十八)财务顾问、资信调查、咨询、见证业务;(十九)经有关监管机构批准的其他业务"
+    },
+    "002463.SZ": {
+      "name_full": "沪士电子股份有限公司",
+      "found_date": "1992-04-14",
+      "list_date": "2010-08-18",
+      "legal_representative": "陈梅芳",
+      "registered_capital_10k": 192436.3537,
+      "registered_capital_currency": "人民币",
+      "employees": 15243,
+      "main_business": "印制电路板、房屋销售、物业费"
+    },
+    "688008.SH": {
+      "name_full": "澜起科技股份有限公司",
+      "found_date": "2004-05-27",
+      "list_date": "2019-07-22",
+      "legal_representative": "杨崇和",
+      "registered_capital_10k": 122053.8021,
+      "registered_capital_currency": "人民币",
+      "employees": 784,
+      "main_business": "从事集成电路芯片产品的设计、研发及销售,为云计算及AI基础设施提供创新、可靠及高能效的互连解决方案"
+    },
+    "003816.SZ": {
+      "name_full": "中国广核电力股份有限公司",
+      "found_date": "2014-03-25",
+      "list_date": "2019-08-26",
+      "legal_representative": "杨长利",
+      "registered_capital_10k": 5049882.4311,
+      "registered_capital_currency": "人民币",
+      "employees": 24336,
+      "main_business": "建设、运营及管理核电站,销售该等核电站所发电力,组织开发核电站的设计及科研工作。"
+    },
+    "688836.SH": {
+      "name_full": "宇树科技股份有限公司",
+      "found_date": "2016-08-26",
+      "list_date": "2026-08-19",
+      "legal_representative": "王兴兴",
+      "registered_capital_10k": 40446.434,
+      "registered_capital_currency": "人民币",
+      "employees": 516,
+      "main_business": "高性能通用人形机器人、四足机器人、机器人组件及具身智能模型的研发、生产和销售业务"
+    },
+    "002916.SZ": {
+      "name_full": "深南电路股份有限公司",
+      "found_date": "1984-07-03",
+      "list_date": "2017-12-13",
+      "legal_representative": "杨智勤",
+      "registered_capital_10k": 68113.3995,
+      "registered_capital_currency": "人民币",
+      "employees": 21211,
+      "main_business": "专注于电子互联领域,致力于“打造世界级电子电路技术与解决方案的集成商”,拥有印制电路板、电子装联、封装基板三项主营业务"
+    },
+    "600309.SH": {
+      "name_full": "万华化学集团股份有限公司",
+      "found_date": "1998-12-16",
+      "list_date": "2001-01-05",
+      "legal_representative": "廖增太",
+      "registered_capital_10k": 313047.1626,
+      "registered_capital_currency": "人民币",
+      "employees": 30772,
+      "main_business": "化工和精细化学品及新材料产品的生产和销售"
+    },
+    "000651.SZ": {
+      "name_full": "珠海格力电器股份有限公司",
+      "found_date": "1989-12-13",
+      "list_date": "1996-11-18",
+      "legal_representative": "董明珠",
+      "registered_capital_10k": 560140.5741,
+      "registered_capital_currency": "人民币",
+      "employees": 71966,
+      "main_business": "从事消费电器及其配件的生产及销售"
+    },
+    "300760.SZ": {
+      "name_full": "深圳迈瑞生物医疗电子股份有限公司",
+      "found_date": "1999-01-25",
+      "list_date": "2018-10-16",
+      "legal_representative": "李西廷",
+      "registered_capital_10k": 121179.9431,
+      "registered_capital_currency": "人民币",
+      "employees": 21288,
+      "main_business": "医疗器械的研发、制造、营销及服务,始终以客户需求为导向,致力于为全球医疗机构提供优质的产品、服务和解决方案"
+    },
+    "603986.SH": {
+      "name_full": "兆易创新科技集团股份有限公司",
+      "found_date": "2005-04-06",
+      "list_date": "2016-08-18",
+      "legal_representative": "何卫",
+      "registered_capital_10k": 70397.1427,
+      "registered_capital_currency": "人民币",
+      "employees": 2458,
+      "main_business": "存储器、微控制器、传感器和模拟芯片的研发、技术支持和销售"
+    },
+    "601985.SH": {
+      "name_full": "中国核能电力股份有限公司",
+      "found_date": "2008-01-21",
+      "list_date": "2015-06-10",
+      "legal_representative": "卢铁忠",
+      "registered_capital_10k": 2056800.2074,
+      "registered_capital_currency": "人民币",
+      "employees": 22306,
+      "main_business": "核能、风能、太阳能等清洁能源项目及配套设施的开发、投资、建设、运营与管理;输配电项目投资、投资管理;核能等清洁能源运行、安全技术研究及相关技术服务、技术推广与咨询业务;清洁技术产业项目投资开发及运营管理;发电、输电、供电业务;综合能源服务"
+    },
+    "600025.SH": {
+      "name_full": "华能澜沧江水电股份有限公司",
+      "found_date": "2001-02-08",
+      "list_date": "2017-12-15",
+      "legal_representative": "孙卫",
+      "registered_capital_10k": 1863109.4257,
+      "registered_capital_currency": "人民币",
+      "employees": 5351,
+      "main_business": "水力和新能源发电项目的开发、建设、运营与管理"
+    },
+    "603288.SH": {
+      "name_full": "佛山市海天调味食品股份有限公司",
+      "found_date": "2000-04-08",
+      "list_date": "2014-02-11",
+      "legal_representative": "管江华",
+      "registered_capital_10k": 584397.3444,
+      "registered_capital_currency": "人民币",
+      "employees": 9160,
+      "main_business": "调味品的生产与销售"
+    },
+    "688801.SH": {
+      "name_full": "上海燧原科技股份有限公司",
+      "found_date": "2018-03-19",
+      "list_date": "2026-09-11",
+      "legal_representative": "张亚林",
+      "registered_capital_10k": 43035.1728,
+      "registered_capital_currency": "人民币",
+      "employees": 838,
+      "main_business": "从事云端AI芯片及相关产品的研发、设计和销售"
+    },
+    "603268.SH": {
+      "name_full": "广东松发陶瓷股份有限公司",
+      "found_date": "2002-07-11",
+      "list_date": "2015-03-19",
+      "legal_representative": "陈建华",
+      "registered_capital_10k": 101871.6941,
+      "registered_capital_currency": "人民币",
+      "employees": 6830,
+      "main_business": "船舶及高端装备的研发、生产和销售"
+    },
+    "300408.SZ": {
+      "name_full": "潮州三环(集团)股份有限公司",
+      "found_date": "1992-12-10",
+      "list_date": "2014-12-03",
+      "legal_representative": "马艳红",
+      "registered_capital_10k": 199671.8571,
+      "registered_capital_currency": "人民币",
+      "employees": 17352,
+      "main_business": "从事电子元件及其基础材料的研发、生产和销售"
+    },
+    "000338.SZ": {
+      "name_full": "潍柴动力股份有限公司",
+      "found_date": "2002-12-23",
+      "list_date": "2007-04-30",
+      "legal_representative": "马常海",
+      "registered_capital_10k": 864022.0621,
+      "registered_capital_currency": "人民币",
+      "employees": 101440,
+      "main_business": "动力系统业务、商用车业务、农业装备业务、智慧物流业务、电力能源业务"
+    },
+    "601869.SH": {
+      "name_full": "长飞光纤光缆股份有限公司",
+      "found_date": "1988-05-31",
+      "list_date": "2018-07-20",
+      "legal_representative": "马杰",
+      "registered_capital_10k": 82790.5108,
+      "registered_capital_currency": "人民币",
+      "employees": 10596,
+      "main_business": "公司专注于通信行业,是全球领先的光纤预制棒、光纤、光缆以及数据通信相关产品的研发创新与生产制造企业,并形成了棒纤缆、综合布线、光模块和通信网络工程等光通信相关产品与服务一体化的完整产业链及多元化和国际化的业务模式"
+    },
+    "000725.SZ": {
+      "name_full": "京东方科技集团股份有限公司",
+      "found_date": "1993-04-09",
+      "list_date": "2001-01-12",
+      "legal_representative": "陈炎顺",
+      "registered_capital_10k": 3704432.8064,
+      "registered_capital_currency": "人民币",
+      "employees": 109895,
+      "main_business": "显示器件,物联网创新,传感,MLED,智慧医工,“N”业务"
+    },
+    "601668.SH": {
+      "name_full": "中国建筑股份有限公司",
+      "found_date": "2007-12-10",
+      "list_date": "2009-07-29",
+      "legal_representative": "郑学选",
+      "registered_capital_10k": 4132039.0444,
+      "registered_capital_currency": "人民币",
+      "employees": 370272,
+      "main_business": "主要投资方向为房地产开发、融投资建造、城镇综合建设等领域。公司强化内部资源整合与业务协同,打造“规划设计、投资开发、基础设施建设、房屋建筑工程”“四位一体”的商业模式,为城市建设提供全领域、全过程、全要素的一揽子服务"
+    },
+    "688347.SH": {
+      "name_full": "华虹宏力半导体有限公司",
+      "found_date": "2005-01-21",
+      "list_date": "2023-08-07",
+      "legal_representative": null,
+      "registered_capital_10k": 192849.4794,
+      "registered_capital_currency": "人民币",
+      "employees": 7628,
+      "main_business": "华虹半导体是全球领先的特色工艺晶圆代工企业,也是行业内特色工艺平台覆盖最全面的晶圆代工企业。公司立足于先进“特色IC+功率器件”的战略目标,以拓展特色工艺技术为基础,提供包括嵌入式/独立式非易失性存储器、功率器件、模拟与电源管理、逻辑与射频等多元化特色工艺平台的晶圆代工及配套服务。"
+    },
+    "002379.SZ": {
+      "name_full": "山东宏桥铝业控股股份有限公司",
+      "found_date": "2000-08-11",
+      "list_date": "2010-03-31",
+      "legal_representative": "张波",
+      "registered_capital_10k": 1303111.8202,
+      "registered_capital_currency": "人民币",
+      "employees": 36178,
+      "main_business": "集氧化铝、电解铝、铝深加工于一体的完整铝产业链业务"
+    },
+    "600406.SH": {
+      "name_full": "国电南瑞科技股份有限公司",
+      "found_date": "2001-02-28",
+      "list_date": "2003-10-16",
+      "legal_representative": "郑宗强",
+      "registered_capital_10k": 803175.6156,
+      "registered_capital_currency": "人民币",
+      "employees": 12680,
+      "main_business": "电网智能、数能融合、能源低碳、轨道交通及工业自动化设备的研发、设计、制造、销售、工程服务与总承包业务"
+    },
+    "688808.SH": {
+      "name_full": "苏州联讯仪器股份有限公司",
+      "found_date": "2017-03-15",
+      "list_date": "2026-04-24",
+      "legal_representative": "胡海洋",
+      "registered_capital_10k": 15194.6667,
+      "registered_capital_currency": "人民币",
+      "employees": 1095,
+      "main_business": "电子测量仪器和半导体测试设备的研发、制造、销售及服务"
+    },
+    "688802.SH": {
+      "name_full": "沐曦集成电路(上海)股份有限公司",
+      "found_date": "2020-09-14",
+      "list_date": "2025-12-17",
+      "legal_representative": "陈维良",
+      "registered_capital_10k": 40010,
+      "registered_capital_currency": "人民币",
+      "employees": 925,
+      "main_business": "研发、设计和销售应用于人工智能训练和推理、通用计算(包括科学计算)与图形渲染领域的全栈GPU产品,并围绕GPU芯片提供配套的软件栈与计算平台"
+    },
+    "300476.SZ": {
+      "name_full": "胜宏科技(惠州)股份有限公司",
+      "found_date": "2006-07-28",
+      "list_date": "2015-06-11",
+      "legal_representative": "陈涛",
+      "registered_capital_10k": 98278.4813,
+      "registered_capital_currency": "人民币",
+      "employees": 17989,
+      "main_business": "高密度印制线路板的研发、生产和销售"
+    },
+    "688820.SH": {
+      "name_full": "盛合晶微半导体有限公司",
+      "found_date": "2014-08-19",
+      "list_date": "2026-04-21",
+      "legal_representative": "崔东",
+      "registered_capital_10k": 1.8628,
+      "registered_capital_currency": "美元",
+      "employees": 5968,
+      "main_business": "中段硅片加工、晶圆级封装、芯粒多芯片集成封装等晶圆级先进封测服务"
+    },
+    "600887.SH": {
+      "name_full": "内蒙古伊利实业集团股份有限公司",
+      "found_date": "1993-06-04",
+      "list_date": "1996-03-12",
+      "legal_representative": "潘刚",
+      "registered_capital_10k": 632536.0667,
+      "registered_capital_currency": "人民币",
+      "employees": 62666,
+      "main_business": "各类乳品及健康饮品的生产与销售"
+    },
+    "302132.SZ": {
+      "name_full": "中航成飞股份有限公司",
+      "found_date": "2002-12-25",
+      "list_date": "2010-08-27",
+      "legal_representative": "隋少春",
+      "registered_capital_10k": 267209.1376,
+      "registered_capital_currency": "人民币",
+      "employees": 26595,
+      "main_business": "航空产品研发、制造、销售、维修与服务保障"
+    },
+    "002938.SZ": {
+      "name_full": "鹏鼎控股(深圳)股份有限公司",
+      "found_date": "1999-04-29",
+      "list_date": "2018-09-18",
+      "legal_representative": "沈庆芳",
+      "registered_capital_10k": 231753.6658,
+      "registered_capital_currency": "人民币",
+      "employees": 47573,
+      "main_business": "各类印制电路板的研发、设计、制造、销售与服务为一体的专业大型厂商,专注于为行业领先客户提供全方位PCB产品及服务,根据下游不同终端产品对于PCB的定制化要求,为客户提供涵盖PCB产品研发、设计、制造与销售服务各个环节的整体解决方案"
+    },
+    "601766.SH": {
+      "name_full": "中国中车股份有限公司",
+      "found_date": "2007-12-28",
+      "list_date": "2008-08-18",
+      "legal_representative": "孙永才",
+      "registered_capital_10k": 2869886.4088,
+      "registered_capital_currency": "人民币",
+      "employees": 151602,
+      "main_business": "铁路装备业务,城轨与城市基础设施业务,新产业业务,现代服务业务,国际业务"
+    },
+    "601818.SH": {
+      "name_full": "中国光大银行股份有限公司",
+      "found_date": "1992-06-18",
+      "list_date": "2010-08-18",
+      "legal_representative": "吴利军",
+      "registered_capital_10k": 5908555.1061,
+      "registered_capital_currency": "人民币",
+      "employees": 48442,
+      "main_business": "经银保监会批准的包括对公及对私存款、贷款、支付结算、资金业务及其他金融业务。"
+    },
+    "601898.SH": {
+      "name_full": "中国中煤能源股份有限公司",
+      "found_date": "2006-08-22",
+      "list_date": "2008-02-01",
+      "legal_representative": "王树东",
+      "registered_capital_10k": 1325866.34,
+      "registered_capital_currency": "人民币",
+      "employees": 46585,
+      "main_business": "煤炭、煤化工、煤矿装备、金融以及包括发电、铝加工、设备及配件进口、招投标服务和铁路运输等在内的其他业务分部,涉及的主要行业有煤炭、煤化工、煤矿装备制造等"
+    },
+    "688795.SH": {
+      "name_full": "摩尔线程智能科技(北京)股份有限公司",
+      "found_date": "2020-06-11",
+      "list_date": "2025-12-05",
+      "legal_representative": "张建中",
+      "registered_capital_10k": 47002.8217,
+      "registered_capital_currency": "人民币",
+      "employees": 1274,
+      "main_business": "GPU及相关产品的研发、设计和销售"
+    },
+    "600690.SH": {
+      "name_full": "海尔智家股份有限公司",
+      "found_date": "1989-04-28",
+      "list_date": "1993-11-19",
+      "legal_representative": "李华刚",
+      "registered_capital_10k": 929853.8164,
+      "registered_capital_currency": "人民币",
+      "employees": 134995,
+      "main_business": "家电的研发、生产及销售工作,涉及冰箱/冷柜、厨电、空调、洗衣设备、水家电及其他智能家庭业务,以及提供智能家庭全套化解决方案"
+    },
+    "600930.SH": {
+      "name_full": "华电新能源集团股份有限公司",
+      "found_date": "2009-08-18",
+      "list_date": "2025-07-16",
+      "legal_representative": "侯军虎",
+      "registered_capital_10k": 4171428.5714,
+      "registered_capital_currency": "人民币",
+      "employees": 10267,
+      "main_business": "风力发电、太阳能发电为主的新能源项目的开发、投资和运营"
+    },
+    "600989.SH": {
+      "name_full": "宁夏宝丰能源集团股份有限公司",
+      "found_date": "2005-11-02",
+      "list_date": "2019-05-16",
+      "legal_representative": "刘元管",
+      "registered_capital_10k": 733336,
+      "registered_capital_currency": "人民币",
+      "employees": 22037,
+      "main_business": "煤制烯烃"
+    },
+    "600031.SH": {
+      "name_full": "三一重工股份有限公司",
+      "found_date": "1994-11-22",
+      "list_date": "2003-07-03",
+      "legal_representative": "向文波",
+      "registered_capital_10k": 919500.4437,
+      "registered_capital_currency": "人民币",
+      "employees": 28469,
+      "main_business": "主要从事工程机械的研发、制造、销售和服务"
+    },
+    "601066.SH": {
+      "name_full": "中信建投证券股份有限公司",
+      "found_date": "2005-11-02",
+      "list_date": "2018-06-20",
+      "legal_representative": "刘成",
+      "registered_capital_10k": 775669.4797,
+      "registered_capital_currency": "人民币",
+      "employees": 12646,
+      "main_business": "投资银行业务、财富管理业务、交易及机构客户服务业务以及资产管理业务"
+    },
+    "688072.SH": {
+      "name_full": "拓荆科技股份有限公司",
+      "found_date": "2010-04-28",
+      "list_date": "2022-04-20",
+      "legal_representative": "刘静",
+      "registered_capital_10k": 29217.327,
+      "registered_capital_currency": "人民币",
+      "employees": 2049,
+      "main_business": "主要从事高端半导体专用设备的研发、生产、销售和技术服务。"
+    },
+    "002352.SZ": {
+      "name_full": "顺丰控股股份有限公司",
+      "found_date": "2003-05-22",
+      "list_date": "2010-02-05",
+      "legal_representative": "王卫",
+      "registered_capital_10k": 510514.8078,
+      "registered_capital_currency": "人民币",
+      "employees": 158761,
+      "main_business": "速运物流业务主要包括时效快递、经济快递、快运、冷运及医药、同城即时配送;供应链及国际业务主要包括国际快递、国际货运及代理、供应链"
+    },
+    "300274.SZ": {
+      "name_full": "阳光电源股份有限公司",
+      "found_date": "2007-07-11",
+      "list_date": "2011-11-02",
+      "legal_representative": "曹仁贤",
+      "registered_capital_10k": 207321.1424,
+      "registered_capital_currency": "人民币",
+      "employees": 19006,
+      "main_business": "专注于太阳能、风能、储能、氢能、电动汽车及充电等新能源电源设备的研发、生产、销售和服务"
+    },
+    "601688.SH": {
+      "name_full": "华泰证券股份有限公司",
+      "found_date": "1991-04-09",
+      "list_date": "2010-02-26",
+      "legal_representative": "王会清",
+      "registered_capital_10k": 902686.3786,
+      "registered_capital_currency": "人民币",
+      "employees": 15513,
+      "main_business": "财富管理业务、机构服务业务、投资管理业务和国际业务"
+    },
+    "600188.SH": {
+      "name_full": "兖矿能源集团股份有限公司",
+      "found_date": "1997-09-25",
+      "list_date": "1998-07-01",
+      "legal_representative": "李伟",
+      "registered_capital_10k": 1003685.202,
+      "registered_capital_currency": "人民币",
+      "employees": 90921,
+      "main_business": "煤炭开采及销售、煤化工产品的生产及销售、物流运输业务以及设备制造和电力业务等"
+    },
+    "300033.SZ": {
+      "name_full": "浙江核新同花顺网络信息股份有限公司",
+      "found_date": "2001-08-24",
+      "list_date": "2009-12-25",
+      "legal_representative": "易峥",
+      "registered_capital_10k": 75264,
+      "registered_capital_currency": "人民币",
+      "employees": 5087,
+      "main_business": "国内领先的互联网金融信息服务提供商,围绕资本市场生态打造“AI+金融信息服务”一体化平台,服务对象覆盖证券公司、基金公司、银行、保险机构、政府部门、研究机构、上市公司等机构客户及广大个人投资者。依托长期积累的金融数据资源、技术能力与用户基础,公司持续推进人工智能技术与主营业务深度融合,加快向AI驱动型金融科技平台转型升级"
+    }
+  }
+}
